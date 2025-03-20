@@ -30,17 +30,25 @@
         position: relative;
         width: calc(25% - 17px);
         background-color: var(--main2);
-        padding: 50px 50px;
         text-align: center;
         @media #{$md} {
           width: calc(50% - 10px);
         }
         @media #{$sm} {
-          padding: 30px 20px;
         }
         @media #{$xs} {
           width: calc(50% - 5px);
-          padding: 15px;
+        }
+        a.li-wrap {
+          display: block;
+          padding: 50px 50px;
+          @media #{$sm} {
+            padding: 30px 20px;
+          }
+          @media #{$xs} {
+            width: calc(50% - 5px);
+            padding: 15px;
+          }
         }
         .ico {
           margin-bottom: 30px;
@@ -61,6 +69,7 @@
           line-height: 1.2;
           font-weight: 500;
           transition: all 0.5s ease;
+          color: var(--white);
           @media #{$xs} {
             transform: translate(0, 0px) !important;
             font-size: 14px;

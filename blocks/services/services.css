@@ -46,7 +46,6 @@
   position: relative;
   width: calc(25% - 17px);
   background-color: var(--main2);
-  padding: 50px 50px;
   text-align: center;
 }
 @media only screen and (max-width: 998px) {
@@ -54,13 +53,22 @@
     width: calc(50% - 10px);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 460px) {
   .b-services .b-services__wrap ul li {
+    width: calc(50% - 5px);
+  }
+}
+.b-services .b-services__wrap ul li a.li-wrap {
+  display: block;
+  padding: 50px 50px;
+}
+@media only screen and (max-width: 768px) {
+  .b-services .b-services__wrap ul li a.li-wrap {
     padding: 30px 20px;
   }
 }
 @media only screen and (max-width: 460px) {
-  .b-services .b-services__wrap ul li {
+  .b-services .b-services__wrap ul li a.li-wrap {
     width: calc(50% - 5px);
     padding: 15px;
   }
@@ -86,6 +94,7 @@
   line-height: 1.2;
   font-weight: 500;
   transition: all 0.5s ease;
+  color: var(--white);
 }
 @media only screen and (max-width: 460px) {
   .b-services .b-services__wrap ul li h3 {
