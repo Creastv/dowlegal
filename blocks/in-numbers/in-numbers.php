@@ -38,7 +38,10 @@ $numbers = get_field('numbers');
                                 </span>
                             <?php endif; ?>
                             <?php if ($number['desc']) : ?>
-                                <p><?php echo $number['desc']; ?></p>
+                                <p><b><?php echo $number['desc']; ?></b></p>
+                            <?php endif; ?>
+                            <?php if ($number['hover_desc']) : ?>
+                                <p class="slide"><?php echo $number['hover_desc']; ?></p>
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
