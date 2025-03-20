@@ -62,10 +62,19 @@ function register_header_settings($wp_customize)
     // ✉️ Ustawienie dla adresu
     $wp_customize->add_setting('header_address', [
         'default'           => '',
-        'sanitize_callback' => 'sanitize_text_field',
+        // 'sanitize_callback' => 'sanitize_text_field',
     ]);
     $wp_customize->add_control('header_address', [
         'label'   => __('Adres', 'go'),
+        'section' => 'header_section',
+        'type'    => 'text',
+    ]);
+    $wp_customize->add_setting('header_address_link', [
+        'default'           => '',
+        // 'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control('header_address_link', [
+        'label'   => __('link do map', 'go'),
         'section' => 'header_section',
         'type'    => 'text',
     ]);

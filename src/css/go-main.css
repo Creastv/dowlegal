@@ -420,6 +420,10 @@ body {
 .h-top .h-top__contact .h-top-email a:hover {
   color: var(--main);
 }
+.h-top .h-top__contact .h-top-adres a:hover span,
+.h-top .h-top__contact .h-top-email a:hover span {
+  color: var(--main);
+}
 @media only screen and (max-width: 998px) {
   .h-top .h-top__contact .h-top-adres,
   .h-top .h-top__contact .h-top-email {

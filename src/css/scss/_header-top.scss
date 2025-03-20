@@ -56,6 +56,9 @@
         color: var(--black);
         &:hover {
           color: var(--main);
+          span {
+            color: var(--main);
+          }
         }
       }
       @media #{$md} {
