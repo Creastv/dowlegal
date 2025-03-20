@@ -1,0 +1,24 @@
+.h-middle {
+  padding: 16px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+  .h-middle__wrap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @media #{$sm} {
+      gap: 8px;
+    }
+  }
+  .navbar__brand {
+    flex: auto;
+    a {
+      img {
+        @media #{$sm} {
+          max-width: 150px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../src/css/scss/variable";
+
+#footer {
+  margin-top: 0px;
+}
+.b-contact {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+  //   padding: 0 20px;
+  .b-contact__wrap {
+    display: flex;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .left {
+      width: calc(50% + 118px);
+      @media #{$sm} {
+        width: 100%;
+        order: 2;
+      }
+    }
+    .right {
+      width: 50%;
+      margin-left: -118px;
+      padding-top: 100px;
+      @media #{$sm} {
+        width: 100%;
+        padding-top: 0px;
+        margin-left: 0;
+        order: 1;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+          font-size: 31px;
+          color: var(--black);
+          margin: 0;
+          padding: 0;
+        }
+        .logo {
+          background-color: var(--black);
+          width: 118px;
+          height: 118px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            // filter: brightness(100);
+            width: 100%;
+            height: auto;
+            padding: 16px;
+          }
+        }
+      }
+      .right_wrap {
+        background-color: #fff;
+        width: 100%;
+        min-height: 300px;
+        padding: 100px 50px;
+        @media #{$xs} {
+          padding: 50px 20px;
+        }
+      }
+    }
+  }
+}

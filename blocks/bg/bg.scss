@@ -1,0 +1,42 @@
+@import "../../src/css/scss/variable";
+
+.b-bg {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+  .b-bg-apla {
+    position: absolute;
+    left: 0;
+    // top: 0;
+    z-index: -99;
+    width: 100%;
+    height: calc(100% - 200px);
+  }
+}
+
+.mt-50 {
+  margin-top: -50px;
+}
+.acf-block-preview .b-bg.mt-50 {
+  //   margin-top: 0px !important;
+}
+
+.acf-block-preview .b-bg {
+  border: 1px solid var(--main);
+  padding: 20px;
+  width: 100%;
+  left: initial;
+  margin-left: initial;
+  margin-top: 50px !important;
+  &:before {
+    content: "Kontener BG";
+    color: var(--white);
+    padding: 3px 10px;
+    font-size: 12px;
+    background-color: var(--main);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

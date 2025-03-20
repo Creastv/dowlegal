@@ -1,0 +1,67 @@
+@import "scss/variable";
+@import "scss/typo";
+@import "scss/global";
+@import "scss/footer";
+// @import "scss/header";
+@import "scss/btn";
+@import "scss/card-post";
+@import "scss/card-sukces";
+@import "scss/card-w-mediach";
+@import "scss/card-team";
+
+.wp-block-spacer {
+  background-color: #eeeef0 !important;
+}
+
+.wp-block {
+  max-width: 90%;
+}
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: 100%;
+}
+/* Width of "full-width" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+html :where(.wp-block)[data-align="right"] > * {
+  float: none !important;
+}
+
+html :where(.wp-block)[data-align="left"] > * {
+  float: none !important;
+}
+
+html :where(.wp-block)[data-align="left"],
+html :where(.wp-block)[data-align="right"] {
+  width: 100%;
+  height: initial !important;
+}
+
+.acf-block-preview {
+}
+
+.acf-block-preview {
+  .custome-separator {
+    background-color: #eeeef0 !important;
+  }
+}
+
+.custome-product {
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    .slide {
+      width: 100% !important;
+    }
+  }
+}
+.home-slider,
+.banner {
+  position: relative !important;
+  width: 100% !important;
+  left: 0 !important;
+  margin-left: 0 !important;
+}

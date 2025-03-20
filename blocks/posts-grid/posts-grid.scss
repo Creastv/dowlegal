@@ -1,0 +1,115 @@
+@import "../../src/css/scss/variable";
+
+.posts-grid {
+  margin-bottom: 100px;
+  @media #{$md} {
+    margin-bottom: 50px;
+  }
+  @media #{$sm} {
+    margin-bottom: 30px;
+  }
+  .posts-grid__wrap--style-one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    .col {
+      margin-bottom: 20px;
+      width: calc(25% - 8px);
+      @media #{$md} {
+        width: calc(50% - 8px);
+      }
+      @media #{$xs} {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .posts-grid__wrap.prawo {
+    .col {
+      &:nth-child(1) {
+        order: 2;
+        @media #{$xs} {
+          order: 1;
+        }
+      }
+      &:nth-child(2) {
+        order: 1;
+        @media #{$xs} {
+          order: 2;
+        }
+      }
+    }
+  }
+  .posts-grid__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 28px;
+    @media #{$md} {
+      gap: 18px;
+    }
+    .col {
+      //   width: calc(50% - 20px);
+      margin-bottom: 20px;
+      width: calc(50% - 16px);
+      @media #{$lg} {
+        width: calc(50% - 16px);
+      }
+      @media #{$md} {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+  .post {
+  }
+  .post-vertical {
+    display: flex;
+    margin-bottom: 10px;
+    transition: all 0.4s ease-out;
+    background-color: var(--white);
+    gap: 16px;
+    @media #{$xs} {
+      gap: 0px;
+    }
+    .post__img {
+      padding-right: 0;
+      @media #{$xs} {
+        width: 100px;
+        // height: 150px;
+      }
+      a {
+        display: block;
+        overflow: hidden;
+        //   margin-bottom: 20px;
+        height: 100%;
+        margin: 0;
+        img {
+          display: block;
+          object-fit: cover;
+          height: 100%;
+          transition: all 0.4s ease-out;
+          width: 140px;
+          margin: 0;
+          @media #{$xs} {
+            width: 100%;
+            object-position: center;
+          }
+        }
+      }
+    }
+    &:hover {
+      transform: translate(0, -5px);
+      box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+      img {
+        filter: contrast(105%);
+        filter: brightness(1.1);
+        transform: scale(1.1);
+      }
+    }
+  }
+}

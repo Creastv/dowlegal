@@ -1,0 +1,44 @@
+:root {
+  --main: #fd5b39;
+  --main1: #0d1029;
+  --main2: #2b3274;
+  --black: #0e102d;
+  --light-black: #161515;
+  --body: #f8f8f8;
+  --gray: #e4e8f0;
+  --light: #fafafc;
+  --white: #fff;
+}
+
+.b-info-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.b-info-contact .b-info-contact__call {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.b-info-contact .b-info-contact__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.b-info-contact .b-info-contact__item .b-info-contact__item__con .label {
+  display: block;
+  font-size: 12px;
+  font-weight: normal !important;
+  margin-bottom: 5px;
+  color: var(--light-black) !important;
+}
+.b-info-contact .b-info-contact__item .b-info-contact__item__con a,
+.b-info-contact .b-info-contact__item .b-info-contact__item__con span:not(.label) {
+  font-weight: 16px;
+  font-weight: 500;
+  color: var(--black);
+}
+.b-info-contact .btn-rev {
+  display: block;
+  width: 100%;
+}/*# sourceMappingURL=info-contact.css.map */

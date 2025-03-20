@@ -1,0 +1,59 @@
+@import "../../src/css/scss/variable";
+
+.bullets-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  @media #{$sm} {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .bullet-item {
+    background-color: var(--white);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    gap: 16px;
+    padding: 10%;
+    text-align: center;
+    @media #{$sm} {
+      padding: 15px 10px;
+      gap: 10px;
+    }
+    .bullet-icon {
+      img {
+        @media #{$sm} {
+          max-width: 32px;
+          height: auto;
+        }
+      }
+    }
+    .bullet-title {
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--black);
+      @media #{$sm} {
+        font-size: 16px;
+      }
+      @media #{$xs} {
+        font-size: 14px;
+      }
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.bullets-container.four-col {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  @media #{$md} {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

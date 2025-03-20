@@ -1,0 +1,87 @@
+:root {
+  --main: #fd5b39;
+  --main1: #0d1029;
+  --main2: #2b3274;
+  --black: #0e102d;
+  --light-black: #161515;
+  --body: #f8f8f8;
+  --gray: #e4e8f0;
+  --light: #fafafc;
+  --white: #fff;
+}
+
+#footer {
+  margin-top: 0px;
+}
+
+.b-contact {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+}
+.b-contact .b-contact__wrap {
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  .b-contact .b-contact__wrap {
+    flex-wrap: wrap;
+  }
+}
+.b-contact .b-contact__wrap .left {
+  width: calc(50% + 118px);
+}
+@media only screen and (max-width: 768px) {
+  .b-contact .b-contact__wrap .left {
+    width: 100%;
+    order: 2;
+  }
+}
+.b-contact .b-contact__wrap .right {
+  width: 50%;
+  margin-left: -118px;
+  padding-top: 100px;
+}
+@media only screen and (max-width: 768px) {
+  .b-contact .b-contact__wrap .right {
+    width: 100%;
+    padding-top: 0px;
+    margin-left: 0;
+    order: 1;
+  }
+}
+.b-contact .b-contact__wrap .right .top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.b-contact .b-contact__wrap .right .top p {
+  font-size: 31px;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+.b-contact .b-contact__wrap .right .top .logo {
+  background-color: var(--black);
+  width: 118px;
+  height: 118px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b-contact .b-contact__wrap .right .top .logo img {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+}
+.b-contact .b-contact__wrap .right .right_wrap {
+  background-color: #fff;
+  width: 100%;
+  min-height: 300px;
+  padding: 100px 50px;
+}
+@media only screen and (max-width: 460px) {
+  .b-contact .b-contact__wrap .right .right_wrap {
+    padding: 50px 20px;
+  }
+}/*# sourceMappingURL=contact.css.map */

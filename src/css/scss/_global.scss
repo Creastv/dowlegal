@@ -1,0 +1,155 @@
+html {
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1570px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media #{$sm} {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.container-narrow {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media #{$sm} {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.entry-content {
+  .container-narrow {
+    @media #{$sm} {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}
+
+.container-full {
+  // width: calc(100vw - 9px);
+  // max-width: 1600px;
+  max-width: 100%;
+  // width: 100vw;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media #{$md} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+#main {
+  position: relative;
+  // z-index: 99;
+  // margin: 50px 0;
+}
+
+#go-to-top {
+  cursor: pointer;
+  position: fixed;
+  text-align: center;
+  z-index: 22;
+  right: 20px;
+  bottom: 30px;
+  width: 39px;
+  height: 39px;
+  border-radius: 100%;
+  transform: translate(0, 100px);
+  // padding: 11px;
+  transition: all 0.2s linear;
+  border: 2px solid var(--body);
+  path {
+    fill: var(--body) !important;
+  }
+  @media #{$sm} {
+    bottom: 20px;
+    right: 15px;
+  }
+  svg {
+    margin-top: 5px;
+    path {
+      fill: var(--white);
+    }
+  }
+  &:hover {
+    background-color: var(--main);
+    transform: translate(0, 100px), scale(1.1);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+#go-to-top.active {
+  transform: translate(0, 0);
+}
+
+.go-pagination {
+  width: 100%;
+  padding: 20px 0;
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  a {
+    padding: 5px 1px;
+    text-decoration: none;
+    color: var(--black);
+    &:hover {
+      color: var(--main);
+    }
+  }
+  span.current {
+    background-color: var(--main);
+    color: var(--white);
+    padding: 5px 5px;
+    border-radius: 3px;
+  }
+}
+
+.rank-math-breadcrumb {
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.8em;
+
+    span {
+      &:last-child {
+        color: var(--black);
+        font-size: 1em;
+        display: inline-block;
+        max-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-overflow: "----";
+        text-align: left;
+      }
+    }
+  }
+}

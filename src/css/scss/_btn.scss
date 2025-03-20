@@ -1,0 +1,62 @@
+.btn-main {
+  padding: 8px 16px;
+  background-color: var(--main);
+  border: 1px solid var(--main) !important;
+  color: var(--white) !important;
+  border: none;
+  border-radius: 0px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s linear;
+  @media #{$sm} {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  span {
+    color: var(--white) !important;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  svg {
+    display: flex;
+    vertical-align: middle;
+    path {
+      fill: var(--white);
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active,
+  &:focus,
+  &:visited {
+    opacity: 1;
+  }
+}
+
+.btn-rev {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid var(--main) !important;
+  color: var(--main) !important;
+  border: none;
+  border-radius: 0px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  @media #{$sm} {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  &:hover {
+    background-color: var(--main);
+    color: var(--white) !important;
+    opacity: 0.8;
+  }
+}

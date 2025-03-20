@@ -1,0 +1,177 @@
+:root {
+  --main: #fd5b39;
+  --main1: #0d1029;
+  --main2: #2b3274;
+  --black: #0e102d;
+  --light-black: #161515;
+  --body: #f8f8f8;
+  --gray: #e4e8f0;
+  --light: #fafafc;
+  --white: #fff;
+}
+
+#reviews-list-carousel {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+  overflow: hidden;
+  position: relative;
+}
+#reviews-list-carousel .swiper-wrapper {
+  align-items: center;
+  padding: 30px 0;
+}
+@media only screen and (max-width: 768px) {
+  #reviews-list-carousel .swiper-wrapper {
+    padding: 0;
+    align-items: flex-start;
+  }
+}
+#reviews-list-carousel .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  max-width: 986px;
+  width: 100%;
+  opacity: 0.3;
+}
+@media only screen and (max-width: 768px) {
+  #reviews-list-carousel .swiper-slide {
+    padding: 20px 15px;
+  }
+}
+#reviews-list-carousel .swiper-slide-active {
+  opacity: 1;
+}
+#reviews-list-carousel .nav-swiper {
+  position: absolute;
+  z-index: 99;
+  top: calc(50% - 30px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1100px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  #reviews-list-carousel .nav-swiper {
+    display: none;
+  }
+}
+#reviews-list-carousel .nav-swiper .s-next {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#reviews-list-carousel .nav-swiper .s-prev {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#reviews-list-carousel .nav-swiper .s-next,
+#reviews-list-carousel .nav-swiper .s-prev {
+  cursor: pointer;
+}
+#reviews-list-carousel .nav-swiper .s-next svg path,
+#reviews-list-carousel .nav-swiper .s-prev svg path {
+  transition: all 0.3s;
+}
+#reviews-list-carousel .nav-swiper .s-next:hover svg path,
+#reviews-list-carousel .nav-swiper .s-prev:hover svg path {
+  stroke: var(--main2);
+}
+#reviews-list-carousel .swiper-pagination {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  #reviews-list-carousel .swiper-pagination {
+    display: block;
+    bottom: 0;
+  }
+}
+
+.review-item {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
+  transition: all 0.3s ease-in-out;
+  background-color: var(--white);
+  padding: 30px;
+}
+.review-item .review-item__wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 460px) {
+  .review-item .review-item__wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15;
+    text-align: center;
+  }
+}
+.review-item .review-item__img {
+  overflow: hidden;
+  display: block;
+  width: 200px;
+  align-self: center;
+}
+@media only screen and (max-width: 460px) {
+  .review-item .review-item__img {
+    width: 150px;
+  }
+}
+.review-item .review-item__img img {
+  display: block;
+  border-radius: 100%;
+}
+.review-item .review-item__content {
+  width: 100%;
+}
+.review-item .review-item__content h3 {
+  font-size: 23px;
+}
+.review-item .review-item__content h3 a {
+  color: var(--black);
+}
+.review-item .review-item__content h3 a:hover {
+  color: var(--main);
+}
+.review-item .review-item__content .review-item__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .review-item .review-item__content .review-item__buttons {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.review-item .review-item__content .review-item__buttons .review-item__logo {
+  max-width: 230px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.review-item .review-item__content .review-item__buttons .btn-rev {
+  align-self: flex-end;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .review-item .review-item__content .review-item__buttons .btn-rev {
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .review-item .review-item__content .review-item__buttons .btn-rev {
+    align-self: stretch;
+    width: 100%;
+  }
+}
+.review-item .no-avatar {
+  width: 100%;
+  padding: 20px;
+}
+.review-item:hover {
+  transform: translate(0, -5px);
+  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=opinions.css.map */

@@ -1,0 +1,22 @@
+// Query
+$xx: "only screen and (max-width: 350px)";
+$xs: "only screen and (max-width: 460px)";
+$sm: "only screen and (max-width: 768px)";
+$md: "only screen and (max-width: 998px)";
+$slg: "only screen and (max-width: 1200px)";
+$lg: "only screen and (max-width: 1300px)";
+$xlg: "only screen and (max-width: 1400px)";
+$xxlg: "only screen and (max-width: 1500px)";
+
+:root {
+  --main: #fd5b39;
+  --main1: #0d1029;
+  --main2: #2b3274;
+
+  --black: #0e102d;
+  --light-black: #161515;
+  --body: #f8f8f8;
+  --gray: #e4e8f0;
+  --light: #fafafc;
+  --white: #fff;
+}
