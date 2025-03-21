@@ -78,6 +78,44 @@ function register_header_settings($wp_customize)
         'section' => 'header_section',
         'type'    => 'text',
     ]);
+    // btn 1
+    $wp_customize->add_setting('header_btn_one_link', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control('header_btn_one_link', [
+        'label'   => __('Button 1 URL', 'go'),
+        'section' => 'header_section',
+        'type'    => 'url',
+    ]);
+    $wp_customize->add_setting('header_btn_one_text', [
+        'default'           => '',
+        // 'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control('header_btn_one_text', [
+        'label'   => __('Button 1 text', 'go'),
+        'section' => 'header_section',
+        'type'    => 'url',
+    ]);
+    // btn 2
+    $wp_customize->add_setting('header_btn_two_link', [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control('header_btn_two_link', [
+        'label'   => __('Button 2 URL', 'go'),
+        'section' => 'header_section',
+        'type'    => 'url',
+    ]);
+    $wp_customize->add_setting('header_btn_two_text', [
+        'default'           => '',
+        // 'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control('header_btn_two_text', [
+        'label'   => __('Button 2 text', 'go'),
+        'section' => 'header_section',
+        'type'    => 'url',
+    ]);
     // 🌐 Opcja checkbox dla wyświetlania social media
     $wp_customize->add_setting('header_display_socialmedia', [
         'default'           => false,
