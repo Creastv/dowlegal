@@ -74,12 +74,13 @@
     background-color: var(--white);
     gap: 16px;
     @media #{$xs} {
+      flex-wrap: wrap;
       gap: 0px;
     }
     .post__img {
       padding-right: 0;
       @media #{$xs} {
-        width: 100px;
+        width: 100%;
         // height: 150px;
       }
       a {
