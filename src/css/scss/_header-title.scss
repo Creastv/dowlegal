@@ -35,7 +35,7 @@
     text-transform: uppercase;
     letter-spacing: 10px;
     font-weight: 500;
-    color: var(--main);
+    color: var(--main) !important;
     @media #{$sm} {
       font-size: 12px;
       letter-spacing: 5px;
@@ -101,7 +101,7 @@
       object-fit: cover;
       opacity: 0.2;
       @media #{$xs} {
-        max-height: 160px;
+        height: 250px;
       }
     }
   }
