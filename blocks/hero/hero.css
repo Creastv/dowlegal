@@ -41,7 +41,8 @@
 }
 @media only screen and (max-width: 460px) {
   .b-hero .img img {
-    height: 300px;
+    width: 100%;
+    height: initial;
     opacity: 1;
   }
 }

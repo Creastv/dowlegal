@@ -29,7 +29,8 @@
       object-fit: cover;
       opacity: 0.4;
       @media #{$xs} {
-        height: 300px;
+        width: 100%;
+        height: initial;
         opacity: 1;
       }
     }
