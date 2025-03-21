@@ -57,7 +57,7 @@ $query_posts_two = new WP_Query($po2);
                 <article class="post-vertical">
                     <div class="post__img">
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('thumbnail'); ?>
+                            <?php the_post_thumbnail('medium'); ?>
                         </a>
                     </div>
                     <div class="post__content">
