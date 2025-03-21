@@ -1231,6 +1231,11 @@ body.single-post .entry-header {
   padding-top: 20px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 460px) {
+  body.single-post .entry-header {
+    display: block !important;
+  }
+}
 body.single-post .entry-header:before {
   display: none !important;
 }

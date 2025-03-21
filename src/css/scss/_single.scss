@@ -34,6 +34,9 @@ body.single-post {
     padding-bottom: 20px;
     padding-top: 20px;
     margin-bottom: 20px;
+    @media #{$xs} {
+      display: block !important;
+    }
 
     &:before {
       display: none !important;

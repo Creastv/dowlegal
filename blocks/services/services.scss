@@ -232,7 +232,9 @@
       padding-bottom: 0;
     }
     .scroll-down {
-      display: none;
+      @media #{$xs} {
+        display: none;
+      }
     }
   }
 }

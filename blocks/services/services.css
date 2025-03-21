@@ -282,6 +282,8 @@
     padding-bottom: 0;
   }
 }
-#post-43564 .entry-header .scroll-down {
-  display: none;
+@media only screen and (max-width: 460px) {
+  #post-43564 .entry-header .scroll-down {
+    display: none;
+  }
 }/*# sourceMappingURL=services.css.map */
