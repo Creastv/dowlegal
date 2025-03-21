@@ -38,6 +38,8 @@
   }
 }
 .b-contact .b-contact__wrap .right {
+  position: relative;
+  z-index: 2;
   width: 50%;
   margin-left: -118px;
   padding-top: 100px;
