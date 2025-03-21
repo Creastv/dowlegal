@@ -746,6 +746,7 @@ body {
     top: initial;
     transform: initial;
     left: initial;
+    overflow: hidden;
   }
 }
 .entry-header .img img {
