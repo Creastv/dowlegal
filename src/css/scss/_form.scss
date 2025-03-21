@@ -156,6 +156,23 @@
   width: 100%;
   padding: 10px;
 }
+.file {
+  .col-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    input {
+      border: none;
+      background-color: #f9f9f9;
+      border: 2px solid #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
 input,
 textarea,
 select {
@@ -163,6 +180,9 @@ select {
   border: none;
   border-bottom: 1px solid var(--main);
   // border: none;
+}
+textarea {
+  width: 100%;
 }
 .wpcf7-checkbox {
   display: flex;
@@ -211,7 +231,7 @@ select {
   color: white;
   padding: 10px;
   border: none;
-  border-radius: 0px;
+  border-radius: 0px !important;
   cursor: pointer;
   width: 100%;
   max-width: 200px;

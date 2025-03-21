@@ -1475,12 +1475,32 @@ body.single-post .entry-content a {
   padding: 10px;
 }
 
+.file .col-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.file .col-1 input {
+  border: none;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 input,
 textarea,
 select {
   margin: 0px !important;
   border: none;
   border-bottom: 1px solid var(--main);
+}
+
+textarea {
+  width: 100%;
 }
 
 .wpcf7-checkbox {
@@ -1535,7 +1555,7 @@ select {
   color: white;
   padding: 10px;
   border: none;
-  border-radius: 0px;
+  border-radius: 0px !important;
   cursor: pointer;
   width: 100%;
   max-width: 200px;
