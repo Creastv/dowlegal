@@ -242,6 +242,11 @@
 .b-services.b-services-home {
   margin-top: -200px;
 }
+@media only screen and (max-width: 460px) {
+  .b-services.b-services-home {
+    margin-top: -80px;
+  }
+}
 .b-services.b-services-home h2 {
   color: var(--white);
 }
@@ -254,12 +259,28 @@
 .b-services-page {
   margin-top: -230px;
 }
+@media only screen and (max-width: 460px) {
+  .b-services-page {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
 .b-services-page h2 {
   color: var(--white);
+}
+@media only screen and (max-width: 460px) {
+  .b-services-page h2 {
+    color: var(--black);
+  }
 }
 
 #post-43564 .entry-header {
   padding-bottom: 200px;
+}
+@media only screen and (max-width: 460px) {
+  #post-43564 .entry-header {
+    padding-bottom: 0;
+  }
 }
 #post-43564 .entry-header .scroll-down {
   display: none;

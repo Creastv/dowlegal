@@ -13,6 +13,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    @media #{$xs} {
+      width: 100%;
+    }
 
     .b-info-contact__item__con {
       .label {

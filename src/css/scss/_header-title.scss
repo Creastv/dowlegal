@@ -5,11 +5,28 @@
   width: 100vw;
   left: -50vw;
   margin-left: 50%;
-  padding-top: 150px;
-  padding-bottom: 100px;
+  // padding-top: 150px;
+  // padding-bottom: 100px;
+  // margin-bottom: 50px;
   margin-bottom: 50px;
+  // @media #{$xs} {
+  //   padding: 100px 0 30px 0;
+  // }
+
   @media #{$xs} {
-    padding: 100px 0 30px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .entry-header__wrap {
+    position: relative;
+    z-index: 1;
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    @media #{$xs} {
+      padding: 0;
+    }
   }
   .entry-label {
     font-family: "Radley", serif;
@@ -43,6 +60,7 @@
       padding-left: 15px;
       padding-right: 15px;
       font-size: 31px;
+      color: var(--black);
     }
   }
   .entry-desc {
@@ -57,6 +75,9 @@
     }
     * {
       color: var(--white);
+      @media #{$xs} {
+        color: var(--black);
+      }
     }
   }
   .img {
@@ -68,16 +89,28 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
+    @media #{$xs} {
+      position: relative;
+      top: initial;
+      transform: initial;
+      left: initial;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       opacity: 0.2;
+      @media #{$xs} {
+        max-height: 160px;
+      }
     }
   }
   .rank-math-breadcrumb {
     span {
       color: var(--white) !important;
+      @media #{$xs} {
+        color: var(--black) !important;
+      }
     }
   }
 }
@@ -95,12 +128,18 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  @media #{$xs} {
+    display: none;
+  }
   span {
     display: block;
     font-size: 14px;
     font-weight: 100;
     text-align: center;
     color: var(--white);
+    @media #{$xs} {
+      color: var(--black);
+    }
   }
   #scroll {
     position: relative;
