@@ -758,7 +758,7 @@ body {
 }
 @media only screen and (max-width: 460px) {
   .entry-header .img img {
-    height: 250px;
+    height: 150px;
   }
 }
 .entry-header .rank-math-breadcrumb span {
