@@ -97,11 +97,12 @@ if (is_category()) {
 				<span><?php _e('Dowiedz się więcej', 'go'); ?></span>
 			</div>
 
+
+			<?php if (is_category()) : ?>
+				<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+				<?php the_archive_description('<div class="entry-desc">', '</div>'); ?>
+			<?php endif; ?>
 		</div>
-		<?php if (is_category()) : ?>
-			<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-			<?php the_archive_description('<div class="entry-desc">', '</div>'); ?>
-		<?php endif; ?>
 		<?php if (!empty($bg)) : ?>
 			<div class="img">
 				<img src="<?php echo esc_url($bg); ?>" alt="<?php esc_attr_e('Tło nagłówka', 'go'); ?>"
