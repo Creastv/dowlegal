@@ -32,7 +32,8 @@
                 ?>
             </nav>
             <div class="h-nav__buttons">
-                <a href="#" class="btn-rev">Kalkulator sankcji</a>
+                <a href="https://dowlegal.jffrbblxkx.cfolks.pl/kalkulator-sankcji.html" class="btn-rev">Kalkulator
+                    sankcji</a>
                 <a href="#" class="btn-main">Bezpłatna analiza</a>
             </div>
         </div>
