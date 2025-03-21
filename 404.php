@@ -3,6 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="text-center">
+                <h1>404</h1>
                 <h2><?php _e('Upss. Chyba się zgubiłeś?', 'go'); ?></h2>
                 <a class="btn btn-main" href="<?php echo esc_url(home_url('/')); ?>">
                     <span><?php _e('Wróć do strony głównej ', 'go'); ?></span></a>
