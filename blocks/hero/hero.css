@@ -28,8 +28,8 @@
 }
 @media only screen and (max-width: 460px) {
   .b-hero .img {
+    background: none;
     position: relative;
-    overflow: hidden;
   }
 }
 .b-hero .img img {
@@ -37,10 +37,12 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.4;
 }
 @media only screen and (max-width: 460px) {
   .b-hero .img img {
     height: 300px;
+    opacity: 1;
   }
 }
 .b-hero .b-hero__wrap {

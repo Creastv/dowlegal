@@ -18,16 +18,19 @@
     top: 0;
     left: 0;
     @media #{$xs} {
+      background: none;
+      // height: 300px;
       position: relative;
-
-      overflow: hidden;
+      // overflow: hidden;
     }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 0.4;
       @media #{$xs} {
         height: 300px;
+        opacity: 1;
       }
     }
   }
