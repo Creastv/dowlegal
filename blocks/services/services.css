@@ -69,7 +69,7 @@
 }
 @media only screen and (max-width: 460px) {
   .b-services .b-services__wrap ul li a.li-wrap {
-    width: calc(50% - 5px);
+    width: 100%;
     padding: 15px;
   }
 }
