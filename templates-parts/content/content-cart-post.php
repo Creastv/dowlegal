@@ -1,4 +1,4 @@
-<article class="post <?php echo $post->ID; ?>">
+<article class="post <?php echo $post->ID; ?>" data-aos="fade-up">
     <header class="post__img">
         <a href="<?php the_permalink(); ?>">
             <?php if (has_post_thumbnail($post->ID)) : ?>

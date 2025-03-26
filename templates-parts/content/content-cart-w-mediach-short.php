@@ -3,7 +3,7 @@ $link = get_field('link', get_the_ID());
 $logo = get_field('logo', get_the_ID());
 $name = get_field('nazwa_portalu', get_the_ID());
 ?>
-<article class="media-item-short">
+<article class="media-item-short" data-aos="fade-up">
     <div class="media-item__wrap">
         <?php if ($name) : ?>
             <div class="media-item-portal">

@@ -14,7 +14,7 @@ $query_posts_one = new WP_Query($po);
             $term_list = wp_get_post_terms(get_the_id(), 'category');
         ?>
             <div class="col">
-                <article class="post">
+                <article class="post" data-aos="fade-up">
                     <div class="post__img">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('post-futured'); ?>

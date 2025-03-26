@@ -22,7 +22,7 @@ if (!empty($block['align'])) {
 }
 ?>
 
-<div class="<?php echo esc_attr($class_name); ?> <?php echo $classLink; ?>">
+<div class="<?php echo esc_attr($class_name); ?> <?php echo $classLink; ?>" data-aos="fade-up">
     <?php if ($link): ?>
         <div class="b-title__content">
         <?php endif; ?>

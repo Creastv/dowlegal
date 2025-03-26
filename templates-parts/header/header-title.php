@@ -23,7 +23,7 @@ if (is_category()) {
 
 ?>
 <?php if ($title || is_home() || is_archive() || is_search() || is_tag() || $customTitle && $customTitle['title']): ?>
-	<header class="entry-header text-center">
+	<header class="entry-header text-center" data-aos="fade-up">
 		<div class="entry-header__wrap">
 			<?php if ($title || is_home() || is_archive() || is_search() || is_tag()): ?>
 				<h1 class="entry-title big-title">

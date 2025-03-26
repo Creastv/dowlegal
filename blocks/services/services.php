@@ -10,7 +10,7 @@ if (!empty($block['className'])) {
 ?>
 
 <div class="<?php echo $class_name; ?>">
-    <h2><?php echo $title; ?></h2>
+    <h2 data-aos="fade-up"><?php echo $title; ?></h2>
     <div class="b-services__wrap">
         <?php
         if ($services): ?>
@@ -21,7 +21,7 @@ if (!empty($block['className'])) {
                     $custom_title = get_field('title', $service->ID);
                     $icon = get_field('icon', $service->ID);
                 ?>
-                    <li>
+                    <li data-aos="fade-up">
                         <a class="li-wrap" href="<?php echo esc_url($permalink); ?>">
                             <?php if ($icon) : ?>
                                 <?php echo wp_get_attachment_image($icon, 'thumbnail', false, array('class' => 'ico')); ?>
@@ -59,7 +59,7 @@ if (!empty($block['className'])) {
                     </li>
                 <?php endforeach; ?>
                 <?php if ($cta): ?>
-                    <li class="cta">
+                    <li class="cta" data-aos="fade-up">
                         <div class="cta-img">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/blocks/services/cta-img-icon.avif"
                                 alt="<?php echo $title; ?>">

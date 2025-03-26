@@ -16,7 +16,7 @@ $query_posts_one = new WP_Query($po);
             $query_posts_one->the_post();
             $term_list = wp_get_post_terms(get_the_id(), 'category');
         ?>
-            <div class="col">
+            <div class="col" data-aos="fade-up">
                 <article class="post">
                     <div class="post__img">
                         <a href="<?php the_permalink(); ?>">

@@ -15,11 +15,11 @@ if (!empty($block['anchor'])) {
 <div <?php echo esc_attr($anchor); ?> class="<?php echo $class_name; ?> <?php echo $site['label']; ?>"
     style="background-color: <?php echo $bg; ?>">
     <div class="row">
-        <div class="col">
+        <div class="col" data-aos="fade-up">
             <div class="img" style="background-image: url(<?php echo $img; ?>)"></div>
         </div>
         <div class="col">
-            <div class="content">
+            <div class="content" data-aos="fade-up">
                 <InnerBlocks />
             </div>
         </div>

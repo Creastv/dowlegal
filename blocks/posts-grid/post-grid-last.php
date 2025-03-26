@@ -25,7 +25,7 @@ $query_posts_two = new WP_Query($po2);
                 $query_posts_one->the_post();
                 $term_list = wp_get_post_terms(get_the_id(), 'category');
             ?>
-                <article class="post">
+                <article class="post" data-aos="fade-up">
                     <div class="post__img">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('large'); ?>
@@ -54,7 +54,7 @@ $query_posts_two = new WP_Query($po2);
                 $query_posts_two->the_post();
                 $term_list = wp_get_post_terms(get_the_id(), 'category');
             ?>
-                <article class="post-vertical">
+                <article class="post-vertical" data-aos="fade-up">
                     <div class="post__img">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail('medium'); ?>

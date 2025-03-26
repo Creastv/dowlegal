@@ -8,4 +8,4 @@ if (!empty($block['className'])) {
 
 ?>
 
-<div class="<?php echo $class_name; ?> sep-<?php echo $haight; ?>"></div>
+<div class="<?php echo $class_name; ?> sep-<?php echo $haight; ?>" data-aos="fade-up"></div>

@@ -11,7 +11,7 @@ if ($link):
 endif;
 ?>
 
-<div class="b-info-contact">
+<div class="b-info-contact" data-aos="fade-up">
     <?php if ($adres) : ?>
         <div class="b-info-contact__item">
             <svg width="22" height="29" viewBox="0 0 22 29" fill="none" xmlns="http://www.w3.org/2000/svg">

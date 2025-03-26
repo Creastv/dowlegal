@@ -5,7 +5,7 @@ $desc = get_field('description');
 $numbers = get_field('numbers');
 ?>
 
-<div class="b-in-number">
+<div class="b-in-number" data-aos="fade-up">
     <div class="b-in-mumbers__wrap">
         <div class="b-in-mumbers__kv">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/blocks/in-numbers/numbers-kv.png"
@@ -25,7 +25,7 @@ $numbers = get_field('numbers');
             <?php if ($numbers): ?>
                 <div class="b-in-numbers__numbers">
                     <?php foreach ($numbers as $number) : ?>
-                        <div class="item">
+                        <div class="item" data-aos="zoom-out-right">
                             <?php if ($number['number']) : ?>
                                 <span>
                                     <?php if ($number['prefiks_number']) : ?>

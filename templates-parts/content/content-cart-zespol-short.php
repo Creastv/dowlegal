@@ -1,7 +1,7 @@
 <?php
 $position = get_field('nazwa_pozycji', get_the_ID());
 ?>
-<article class="team-item-short">
+<article class="team-item-short" data-aos="fade-up">
     <div class="team-item__wrap">
         <?php if (has_post_thumbnail(get_the_ID())) : ?>
             <div class="team-item__img">

@@ -3,7 +3,7 @@ $style = get_field('style');
 ?>
 <?php if ($style == 1) : ?>
     <!-- 🔹 POSTY -->
-    <div id="team-list">
+    <div id="team-list" data-aos="fade-up">
         <?php
         $args = array(
             'post_type'      => 'zespol',
@@ -37,7 +37,7 @@ $style = get_field('style');
     <?php } ?>
 
 <?php else : ?>
-    <div id="team-list-carousel">
+    <div id="team-list-carousel" data-aos="fade-up">
         <div class="swiper mySwiper-team">
             <div class="swiper-wrapper">
                 <?php

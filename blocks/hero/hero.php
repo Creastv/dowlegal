@@ -3,7 +3,7 @@ $bg = get_field('bg');
 ?>
 
 
-<section class="b-hero">
+<section class="b-hero" data-aos="fade-up">
     <div class="b-hero__wrap">
 
         <div class="b-hero__content">

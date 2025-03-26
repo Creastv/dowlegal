@@ -1,4 +1,4 @@
-<article>
+<article data-aos="fade-up">
     <header class="entry-header text-center">
         <h1 class="entry-title ">
             <?php the_title(); ?>

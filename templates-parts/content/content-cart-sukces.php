@@ -8,7 +8,7 @@ if (!$avatar) {
 }
 ?>
 
-<article class="sukcesy-item">
+<article class="sukcesy-item" data-aos="fade-up">
     <div class="sukcesy-item__wrap">
         <?php if ($avatar): ?>
             <div class="sukcesy-item__img">
