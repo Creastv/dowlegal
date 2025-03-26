@@ -77,6 +77,15 @@
 .bullets-container .bullet-item:hover .bullet-color {
   opacity: 1;
 }
+.bullets-container .bullet-item:hover .white-content {
+  color: var(--white) !important;
+}
+.bullets-container .bullet-item:hover .white-content * {
+  color: var(--white) !important;
+}
+.bullets-container .bullet-item:hover .white-content img {
+  filter: brightness(100);
+}
 
 .bullets-container.four-col {
   grid-template-columns: 1fr 1fr 1fr 1fr;

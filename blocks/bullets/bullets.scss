@@ -63,6 +63,15 @@
       .bullet-color {
         opacity: 1;
       }
+      .white-content {
+        color: var(--white) !important;
+        * {
+          color: var(--white) !important;
+        }
+        img {
+          filter: brightness(100);
+        }
+      }
     }
   }
 }
