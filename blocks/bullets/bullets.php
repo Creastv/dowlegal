@@ -21,22 +21,24 @@ if ($col == 2) {
             }
             ?>
             <div class="bullet-item" data-aos="fade-up">
-                <?php if ($icon): ?>
-                    <div class="bullet-icon <?php echo $class; ?>">
-                        <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>">
-                    </div>
-                <?php endif; ?>
+                <div class="bullet-item__wrap">
+                    <?php if ($icon): ?>
+                        <div class="bullet-icon <?php echo $class; ?>">
+                            <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt']); ?>">
+                        </div>
+                    <?php endif; ?>
 
-                <?php if ($title): ?>
-                    <p class="bullet-title <?php echo $class; ?>"> <?php echo $title; ?> </p>
-                <?php endif; ?>
+                    <?php if ($title): ?>
+                        <p class="bullet-title <?php echo $class; ?>"> <?php echo $title; ?> </p>
+                    <?php endif; ?>
 
-                <?php if ($description): ?>
-                    <p class="bullet-description <?php echo $class; ?>"> <?php echo esc_html($description); ?> </p>
-                <?php endif; ?>
-                <?php if ($color): ?>
-                    <span class="bullet-color" style="background-color: <?php echo $color; ?>;"></span>
-                <?php endif; ?>
+                    <?php if ($description): ?>
+                        <p class="bullet-description <?php echo $class; ?>"> <?php echo esc_html($description); ?> </p>
+                    <?php endif; ?>
+                    <?php if ($color): ?>
+                        <span class="bullet-color" style="background-color: <?php echo $color; ?>;"></span>
+                    <?php endif; ?>
+                </div>
 
             </div>
         <?php endwhile; ?>
