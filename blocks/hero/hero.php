@@ -8,8 +8,12 @@ $subtitle = get_field('subtitle');
 <section class="b-hero">
     <div class="b-hero__wrap">
         <div class="b-hero__content">
-            <h1 data-aos="fade-up" data-aos-delay="300"> <?php echo $title; ?></h1>
-            <p data-aos="fade-up" data-aos-delay="500"><?php echo $subtitle; ?></p>
+            <?php if ($title) : ?>
+                <h1 data-aos="fade-up" data-aos-delay="300"> <?php echo $title; ?></h1>
+            <?php endif; ?>
+            <?php if ($subtitle) : ?>
+                <p data-aos="fade-up" data-aos-delay="500"><?php echo $subtitle; ?></p>
+            <?php endif; ?>
             <InnerBlocks />
             <div class="scroll-down" data-aos="fade-up" data-aos-delay="700">
                 <span id="scroll">
