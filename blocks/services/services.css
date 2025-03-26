@@ -1,5 +1,5 @@
 :root {
-  --main: #fd5b39;
+  --main: #e18064;
   --main1: #0d1029;
   --main2: #2b3274;
   --black: #0e102d;
@@ -47,6 +47,7 @@
   width: calc(25% - 17px);
   background-color: var(--main2);
   text-align: center;
+  transition: all 0.5s ease;
 }
 @media only screen and (max-width: 998px) {
   .b-services .b-services__wrap ul li {

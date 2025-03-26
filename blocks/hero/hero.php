@@ -1,26 +1,28 @@
 <?php
 $bg = get_field('bg');
+$title = get_field('title');
+$subtitle = get_field('subtitle');
 ?>
 
 
-<section class="b-hero" data-aos="fade-up">
+<section class="b-hero">
     <div class="b-hero__wrap">
-
         <div class="b-hero__content">
+            <h1 data-aos="fade-up" data-aos-delay="300"> <?php echo $title; ?></h1>
+            <p data-aos="fade-up" data-aos-delay="500"><?php echo $subtitle; ?></p>
             <InnerBlocks />
-            <div class="scroll-down">
+            <div class="scroll-down" data-aos="fade-up" data-aos-delay="700">
                 <span id="scroll">
                     <i></i>
                     <i></i>
                 </span>
                 <span><?php _e('Poznaj nasze<br> specjalizacje', 'go'); ?></span>
-
             </div>
         </div>
 
         <div class="img">
             <?php echo wp_get_attachment_image($bg, 'full', false, array('class' => 'go-parallex')); ?>
-            <svg id="h-ornament" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1811.11 520.11">
+            <svg id="h-ornament" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1811.11 520.11" data-aos="fade-up">
                 <g opacity=".1">
                     <rect fill="#fff" x="1782.55" y="341.33" width="28.56" height="178.78" />
                     <path fill="#fff"

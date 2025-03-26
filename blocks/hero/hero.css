@@ -1,5 +1,5 @@
 :root {
-  --main: #fd5b39;
+  --main: #e18064;
   --main1: #0d1029;
   --main2: #2b3274;
   --black: #0e102d;
@@ -75,6 +75,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   .b-hero .b-hero__content {
@@ -98,10 +99,11 @@
 .b-hero .b-hero__content h1,
 .b-hero .b-hero__content p {
   color: var(--white);
+  margin: 0;
 }
 .b-hero .b-hero__content h1 {
   font-size: 71px;
-  line-height: normal;
+  line-height: 1;
 }
 @media only screen and (max-width: 768px) {
   .b-hero .b-hero__content h1 {
