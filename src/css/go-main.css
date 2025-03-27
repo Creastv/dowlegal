@@ -357,7 +357,7 @@ body {
 }
 
 .cmplz-show {
-  right: initial;
+  right: initial !important;
   left: 40px;
   transform: translate(0px, -36px);
   padding: 0;
