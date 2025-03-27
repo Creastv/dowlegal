@@ -26,6 +26,9 @@
     @media #{$sm} {
       flex-direction: row-reverse;
     }
+    .navbar__navigation {
+      flex: auto;
+    }
     .h-nav__buttons {
       display: flex;
       gap: 20px;
@@ -46,6 +49,49 @@
     }
   }
 }
+
+.mega-menu-item:not(.mega-menu-flyout) {
+  .mega-sub-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px !important;
+    @media #{$sm} {
+      display: none;
+      padding: 0px !important;
+    }
+    li {
+      width: 33.333% !important;
+      padding: 5px !important;
+
+      text-align: center !important;
+
+      @media #{$sm} {
+        width: 100% !important;
+        padding: 5px !important;
+      }
+
+      a {
+        background-color: var(--main) !important;
+        min-height: 55px !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        color: var(--main1) !important;
+        align-items: center !important;
+        justify-content: center;
+        display: flex !important;
+        height: 100% !important;
+        width: 100% !important;
+        &:hover {
+          background-color: var(--main1) !important;
+          color: var(--main) !important;
+        }
+      }
+    }
+  }
+}
+
 .h-nav.fixed {
   background-color: var(--white);
   #mega-menu-primary_menu {
@@ -62,21 +108,31 @@
         }
       }
     }
-    .mega-sub-menu {
-      @media #{$sm} {
-        a,
-        span {
-          color: var(--black) !important;
-          &:hover {
-            color: var(--main) !important;
-          }
-        }
-      }
-    }
+    // .mega-sub-menu {
+    //   @media #{$sm} {
+    //     a,
+    //     span {
+    //       color: var(--main1) !important;
+    //       &:hover {
+    //         color: var(--main) !important;
+    //       }
+    //     }
+    //   }
+    // }
     .mega-current_page_item {
       a,
       span {
         color: var(--main) !important;
+      }
+    }
+    .mega-current_page_item.mega-menu-item:not(.mega-menu-flyout) {
+      li {
+        a {
+          color: var(--main1) !important;
+          &:hover {
+            color: var(--main) !important;
+          }
+        }
       }
     }
   }
