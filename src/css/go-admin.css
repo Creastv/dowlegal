@@ -355,6 +355,13 @@ body {
   text-align: left;
 }
 
+.cmplz-show {
+  right: initial;
+  left: 40px;
+  transform: translate(0px, -36px);
+  padding: 0;
+}
+
 #footer {
   position: relative;
   background-color: var(--main1);
