@@ -77,3 +77,21 @@ if (jQuery(window).width() > 500) {
       transition: 'translate 0.1s ease' // CSS transition, added on elements where type:'foreground' 
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const bounce = document.querySelector('.bounce');
+  const close = document.querySelector('.close');
+  const wrap = document.querySelector('.sticker');
+
+  if (bounce && close && wrap) {
+      bounce.addEventListener('click', function () {
+          wrap.classList.add('active');
+          bounce.classList.add('active');
+      });
+
+      close.addEventListener('click', function () {
+          wrap.classList.remove('active');
+          bounce.classList.remove('active');
+      });
+  }
+});

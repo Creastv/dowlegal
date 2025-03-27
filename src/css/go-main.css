@@ -273,12 +273,12 @@ body {
   position: fixed;
   text-align: center;
   z-index: 22;
-  right: 20px;
-  bottom: 30px;
+  right: 36px;
+  bottom: 0px;
   width: 39px;
   height: 39px;
   border-radius: 100%;
-  transform: translate(0, 100px);
+  transform: translate(0, 200px);
   transition: all 0.2s linear;
   border: 2px solid var(--body);
 }
@@ -304,7 +304,12 @@ body {
 }
 
 #go-to-top.active {
-  transform: translate(0, 0);
+  transform: translate(0, -150px);
+}
+@media only screen and (max-width: 460px) {
+  #go-to-top.active {
+    transform: translate(0, -80px);
+  }
 }
 
 .go-pagination {
@@ -1623,6 +1628,10 @@ textarea {
   font-weight: normal;
   display: block;
   padding: 5px;
+}
+
+.wpcf7-response-output {
+  font-size: 12px;
 }
 
 .posts-wraper {
@@ -3367,4 +3376,143 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 [data-aos=flip-down].aos-animate {
   transform: perspective(2500px) rotateX(0);
+}
+
+.sticker {
+  position: fixed;
+  z-index: 999999999;
+  bottom: 30px;
+  right: 30px;
+  padding-top: 50px;
+  max-height: 600px;
+  height: 100%;
+  transform-origin: bottom right;
+  transform: scale(0);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+@media only screen and (max-width: 460px) {
+  .sticker {
+    max-height: 100%;
+    right: 0;
+    bottom: 0;
+    padding-top: 0px;
+  }
+}
+.sticker .sticker__wrap {
+  position: relative;
+  overflow: scroll;
+  z-index: 99;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(219, 219, 219) 61%);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.185);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 350px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 460px) {
+  .sticker .sticker__wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.sticker .sticker__wrap .sticker__content .sticker__content__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sticker .sticker__wrap .sticker__content .sticker__content__top .close {
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: 500;
+}
+.sticker .sticker__wrap .sticker__content .sticker__content__top svg {
+  width: 50px;
+  margin: 10px;
+  height: auto;
+}
+.sticker .sticker__wrap .sticker__content h5 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 24px;
+}
+.sticker .sticker__wrap .sticker__content p {
+  font-size: 14px;
+}
+.sticker .sticker__wrap .sticky__form {
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+}
+.sticker .sticker__wrap .sticky__form .col-1 {
+  position: relative;
+}
+.sticker .sticker__wrap .sticky__form .wpcf7-submit {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+.bounce {
+  position: fixed;
+  z-index: 999999999;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main1);
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  padding: 9px;
+  animation: bounce 5s ease infinite;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+@media only screen and (max-width: 460px) {
+  .bounce {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+.bounce svg path {
+  transition: all 0.3s ease;
+  fill: var(--main);
+  stroke: var(--white);
+}
+.bounce:hover {
+  background-color: var(--main);
+}
+.bounce:hover path {
+  fill: var(--main1);
+  stroke: var(--white);
+}
+
+.bounce.active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sticker.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }/*# sourceMappingURL=go-main.css.map */

@@ -272,12 +272,12 @@ body {
   position: fixed;
   text-align: center;
   z-index: 22;
-  right: 20px;
-  bottom: 30px;
+  right: 36px;
+  bottom: 0px;
   width: 39px;
   height: 39px;
   border-radius: 100%;
-  transform: translate(0, 100px);
+  transform: translate(0, 200px);
   transition: all 0.2s linear;
   border: 2px solid var(--body);
 }
@@ -303,7 +303,12 @@ body {
 }
 
 #go-to-top.active {
-  transform: translate(0, 0);
+  transform: translate(0, -150px);
+}
+@media only screen and (max-width: 460px) {
+  #go-to-top.active {
+    transform: translate(0, -80px);
+  }
 }
 
 .go-pagination {
