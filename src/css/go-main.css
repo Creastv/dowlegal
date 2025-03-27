@@ -1617,6 +1617,14 @@ textarea {
   width: 100%;
 }
 
+.wpcf7-not-valid-tip {
+  color: #dc3232;
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+  padding: 5px;
+}
+
 .posts-wraper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
