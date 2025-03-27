@@ -26,7 +26,7 @@ $style = get_field('style');
 
     <!-- 🔹 PRZYCISK "WCZYTAJ WIĘCEJ" -->
     <?php if ($query->found_posts > 10) { ?>
-        <div class="load-more-wrap">
+        <div class="load-more-wrap" data-aos="fade-up">
             <button id="load-more-team" data-page-team="1">Wczytaj więcej
                 <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 7.5L18 28.5M18 28.5L28.5 18M18 28.5L7.5 18" stroke="#FD5B39" stroke-width="2"

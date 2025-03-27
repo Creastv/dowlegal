@@ -111,7 +111,7 @@ $style = get_field('style');
         <div class="swiper-pagination"></div>
     </div>
     <?php if ($link) : ?>
-        <div class="btn-carousel">
+        <div class="btn-carousel" data-aos="fade-up">
             <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                 <?php echo esc_html($link_title); ?>
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

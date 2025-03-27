@@ -7,11 +7,11 @@ $numbers = get_field('numbers');
 
 <div class="b-in-number" data-aos="fade-up">
     <div class="b-in-mumbers__wrap">
-        <div class="b-in-mumbers__kv">
+        <div class="b-in-mumbers__kv" data-aos="fade-up">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/blocks/in-numbers/numbers-kv.png"
                 alt="<?php echo $title; ?>">
         </div>
-        <div class="b-in-mumbers__content">
+        <div class="b-in-mumbers__content" data-aos="fade-up">
             <?php if ($label) : ?>
                 <span class="label"><?php echo $label; ?></span>
             <?php endif; ?>
