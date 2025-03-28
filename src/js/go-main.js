@@ -95,3 +95,29 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('consent-toggle');
+  const more = document.getElementById('consent-more');
+
+  if (toggle && more) {
+      toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isHidden = more.style.display === 'none';
+          more.style.display = isHidden ? 'inline' : 'none';
+          toggle.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
+      });
+  }
+
+  const toggleSticky = document.getElementById('consent-sticky');
+  const moreSticky = document.getElementById('consent-more-sticky');
+
+  if (toggleSticky && moreSticky && more) {
+      toggleSticky.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isHidden = more.style.display === 'none';
+          moreSticky.style.display = isHidden ? 'inline' : 'none';
+          toggleSticky.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
+      });
+  }
+});

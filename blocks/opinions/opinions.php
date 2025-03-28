@@ -27,7 +27,7 @@ $reviews = get_field('reviews');
                                     <?php if ($rev): ?>
                                         <div class="excerpt">
                                             <p><?php echo $rev; ?></p>
-                                            <button class="toggle-btn">Czytaj więcej</button>
+                                            <a class="toggle-btn"><?php echo _e('Rozwiń', 'go'); ?></a>
                                         </div>
                                     <?php endif; ?>
                                 </div>
