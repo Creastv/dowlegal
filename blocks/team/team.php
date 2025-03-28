@@ -81,18 +81,24 @@ $style = get_field('style');
 
             </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination team--pagination"></div>
     </div>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper-team", {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+
             breakpoints: {
                 640: {
                     slidesPerView: 2,
@@ -116,7 +122,7 @@ $style = get_field('style');
                 prevEl: "#team-list-carousel .s-prev",
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".team--pagination",
                 clickable: true,
             },
         });

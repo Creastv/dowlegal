@@ -1,7 +1,7 @@
 .team-item-short {
   position: relative;
   //   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   background-color: var(--white);
   height: 100%;
   // padding-bottom: 70px;
@@ -41,14 +41,14 @@
     }
   }
   &:hover {
-    transform: translate(0, -5px);
+    transform: translate(0, -5px) !important;
     box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
   }
 }
 
 .team-item {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   background-color: var(--white);
   .team-item__wrap {
     display: flex;
@@ -62,6 +62,7 @@
         width: 100%;
       }
       img {
+        display: block;
         width: 100%;
         height: auto;
       }
@@ -95,5 +96,9 @@
         }
       }
     }
+  }
+  &:hover {
+    transform: translate(0, -10px) !important;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
   }
 }

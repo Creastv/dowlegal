@@ -3,18 +3,18 @@ $style = get_field('style');
 ?>
 <?php if ($style == 1) : ?>
     <!-- 🔹 FILTRACJA PO TAXONOMII -->
-    <?php
-    $terms = get_terms(array(
-        'taxonomy'   => 'suk-rok', // Zmień na swoją nazwę taksonomii
-        'hide_empty' => true,
-    ));
+    <!-- <?php
+            $terms = get_terms(array(
+                'taxonomy'   => 'suk-rok', // Zmień na swoją nazwę taksonomii
+                'hide_empty' => true,
+            ));
 
-    if (!empty($terms) && !is_wp_error($terms)) {
-        // Sortowanie w odwrotnej kolejności alfabetycznej (od Z do A)
-        usort($terms, function ($a, $b) {
-            return strcasecmp($b->name, $a->name);
-        });
-    ?>
+            if (!empty($terms) && !is_wp_error($terms)) {
+                // Sortowanie w odwrotnej kolejności alfabetycznej (od Z do A)
+                usort($terms, function ($a, $b) {
+                    return strcasecmp($b->name, $a->name);
+                });
+            ?>
         <ul id="filter-category-sukcesy">
             <li data-slug-sukcesy="all" class="active">Wszystkie</li>
             <?php foreach ($terms as $term) : ?>
@@ -23,17 +23,18 @@ $style = get_field('style');
                 </li>
             <?php endforeach; ?>
         </ul>
-    <?php } ?>
+    <?php } ?> -->
 
 
     <!-- 🔹 POSTY -->
     <div id="sukcesy-list">
         <?php
         $args = array(
-            'post_type'      => 'sukcesy',
+            'post_type'      => 'post',
             'posts_per_page' => 10,
             'post_status'    => 'publish',
             'paged'          => 1,
+            'category_name' => 'sukcesy'
         );
         $query = new WP_Query($args);
 
@@ -73,9 +74,10 @@ $style = get_field('style');
             <div class="swiper-wrapper">
                 <?php
                 $args = array(
-                    'post_type'      => 'sukcesy',
+                    'post_type'      => 'post',
                     'posts_per_page' => 8,
                     'post_status'    => 'publish',
+                    'category_name' => 'sukcesy'
                 );
                 $query = new WP_Query($args);
 
@@ -108,10 +110,10 @@ $style = get_field('style');
                 </div>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination sukcesy--pagination"></div>
     </div>
     <?php if ($link) : ?>
-        <div class="btn-carousel" data-aos="fade-up">
+        <div class="btn-carousel">
             <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                 <?php echo esc_html($link_title); ?>
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +148,7 @@ $style = get_field('style');
                 prevEl: "#sukcesy-list-carousel .s-prev",
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".sukcesy--pagination",
                 clickable: true,
             },
         });

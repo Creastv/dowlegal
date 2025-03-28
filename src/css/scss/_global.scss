@@ -163,3 +163,9 @@ body {
   transform: translate(0px, -36px);
   padding: 0;
 }
+
+.swiper-pagination {
+  .swiper-pagination-bullet-active {
+    background-color: var(--main);
+  }
+}

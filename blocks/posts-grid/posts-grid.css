@@ -92,7 +92,7 @@
 .posts-grid .post-vertical {
   display: flex;
   margin-bottom: 10px;
-  transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out !important;
   background-color: var(--white);
   gap: 16px;
 }
@@ -133,7 +133,7 @@
   }
 }
 .posts-grid .post-vertical:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -5px) !important;
   box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .posts-grid .post-vertical:hover img {

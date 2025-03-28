@@ -362,6 +362,10 @@ body {
   padding: 0;
 }
 
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--main);
+}
+
 #footer {
   position: relative;
   background-color: var(--main1);
@@ -755,7 +759,7 @@ body {
 
 .post {
   background-color: var(--white);
-  transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out !important;
   height: 100%;
 }
 .post .post__img {
@@ -780,7 +784,7 @@ body {
   height: 100%;
 }
 .post:hover {
-  transform: translate(0, -10px);
+  transform: translate(0, -10px) !important;
   box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .post:hover img {
@@ -843,14 +847,14 @@ body {
 
 .sukcesy-item {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   background-color: var(--white);
 }
 .sukcesy-item .sukcesy-item__wrap {
   display: flex;
   gap: 10px;
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 768px) {
   .sukcesy-item .sukcesy-item__wrap {
     flex-wrap: wrap;
     gap: 0;
@@ -860,23 +864,21 @@ body {
   position: relative;
   width: 25%;
   overflow: hidden;
-  padding: 20px 20px 0 20px;
-  align-self: flex-end;
+  padding: 20px;
 }
 @media only screen and (max-width: 998px) {
   .sukcesy-item .sukcesy-item__img {
-    width: 40%;
+    width: 50%;
   }
 }
 @media only screen and (max-width: 768px) {
   .sukcesy-item .sukcesy-item__img {
-    width: 40%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 460px) {
   .sukcesy-item .sukcesy-item__img {
     width: 100%;
-    max-width: 150px;
   }
 }
 .sukcesy-item .sukcesy-item__img img {
@@ -885,17 +887,10 @@ body {
   z-index: 1;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.sukcesy-item .sukcesy-item__img svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .sukcesy-item .sukcesy-item__content {
   width: 75%;
@@ -904,18 +899,19 @@ body {
 }
 @media only screen and (max-width: 998px) {
   .sukcesy-item .sukcesy-item__content {
-    width: 60%;
+    width: 50%;
   }
 }
 @media only screen and (max-width: 768px) {
   .sukcesy-item .sukcesy-item__content {
-    width: 60%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 460px) {
   .sukcesy-item .sukcesy-item__content {
     width: 100%;
     padding: 20px;
+    padding-top: 0;
   }
 }
 .sukcesy-item .sukcesy-item__content h3 {
@@ -965,12 +961,12 @@ body {
   padding: 20px;
 }
 .sukcesy-item:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -5px) !important;
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .media-item {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
 }
 .media-item .media-item__wrap {
@@ -1021,12 +1017,12 @@ body {
   }
 }
 .media-item:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -5px) !important;
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .media-item-short {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
 }
 .media-item-short .media-item__wrap {
   border: 1px solid #f8f8f8;
@@ -1072,13 +1068,13 @@ body {
   }
 }
 .media-item-short:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -5px) !important;
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .team-item-short {
   position: relative;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   background-color: var(--white);
   height: 100%;
 }
@@ -1118,13 +1114,13 @@ body {
   }
 }
 .team-item-short:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -5px) !important;
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .team-item {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   background-color: var(--white);
 }
 .team-item .team-item__wrap {
@@ -1145,6 +1141,7 @@ body {
   }
 }
 .team-item .team-item__wrap .team-item__img img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -1182,6 +1179,10 @@ body {
     align-self: stretch;
     width: 100%;
   }
+}
+.team-item:hover {
+  transform: translate(0, -10px) !important;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .wp-block-spacer {

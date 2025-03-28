@@ -1,5 +1,5 @@
 .media-item {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
   .media-item__wrap {
     display: flex;
@@ -42,13 +42,13 @@
     }
   }
   &:hover {
-    transform: translate(0, -5px);
+    transform: translate(0, -5px) !important;
     box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
   }
 }
 
 .media-item-short {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
   .media-item__wrap {
     border: 1px solid #f8f8f8;
     display: flex;
@@ -88,7 +88,7 @@
     }
   }
   &:hover {
-    transform: translate(0, -5px);
+    transform: translate(0, -5px) !important;
     box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
   }
 }

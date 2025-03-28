@@ -2,6 +2,9 @@
 #team-list-carousel {
   position: relative;
   position: relative;
+  @media #{$sm} {
+    padding-bottom: 30px;
+  }
   .swiper-wrapper {
     align-items: stretch;
   }

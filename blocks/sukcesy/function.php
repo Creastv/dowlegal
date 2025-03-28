@@ -7,10 +7,11 @@ function filter_posts_by_category_sukcesy()
     $category = isset($_POST['category']) && $_POST['category'] !== 'all' ? sanitize_text_field($_POST['category']) : '';
 
     $args = array(
-        'post_type'      => 'sukcesy',
+        'post_type'      => 'post',
         'posts_per_page' => 10,
         'post_status'    => 'publish',
         'paged'          => 1,
+        'category_name' => 'sukcesy'
     );
 
     if (!empty($category)) {
@@ -60,10 +61,11 @@ function load_more_posts_sukcesy()
     $category = isset($_POST['category']) && $_POST['category'] !== 'all' ? sanitize_text_field($_POST['category']) : '';
 
     $args = array(
-        'post_type'      => 'sukcesy',
+        'post_type'      => 'post',
         'posts_per_page' => 10,
         'post_status'    => 'publish',
         'paged'          => $paged,
+        'category_name' => 'sukcesy'
     );
 
     if ($category) {

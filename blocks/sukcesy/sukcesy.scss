@@ -74,6 +74,9 @@
   margin-left: 50%;
   overflow: hidden;
   position: relative;
+  @media #{$sm} {
+    padding-bottom: 20px;
+  }
   .swiper-wrapper {
     align-items: center;
   }

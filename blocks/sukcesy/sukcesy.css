@@ -88,6 +88,11 @@
   overflow: hidden;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  #sukcesy-list-carousel {
+    padding-bottom: 20px;
+  }
+}
 #sukcesy-list-carousel .swiper-wrapper {
   align-items: center;
 }

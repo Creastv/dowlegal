@@ -117,82 +117,82 @@ function register_cpt_media()
 add_action('init', 'register_cpt_media');
 
 
-function register_cpt_sukcesy()
-{
-    $labels = array(
-        'name'               => 'Sukcesy',
-        'singular_name'      => 'Sukces',
-        'menu_name'          => 'Sukcesy',
-        'name_admin_bar'     => 'Sukcesy',
-        'add_new'            => 'Dodaj nowy',
-        'add_new_item'       => 'Dodaj nowy sukces',
-        'new_item'           => 'Nowy sukces',
-        'edit_item'          => 'Edytuj sukces',
-        'view_item'          => 'Zobacz sukces',
-        'all_items'          => 'Wszystkie sukcesy',
-        'search_items'       => 'Szukaj sukcesów',
-        'not_found'          => 'Nie znaleziono',
-        'not_found_in_trash' => 'Nie znaleziono w koszu'
-    );
+// function register_cpt_sukcesy()
+// {
+//     $labels = array(
+//         'name'               => 'Sukcesy',
+//         'singular_name'      => 'Sukces',
+//         'menu_name'          => 'Sukcesy',
+//         'name_admin_bar'     => 'Sukcesy',
+//         'add_new'            => 'Dodaj nowy',
+//         'add_new_item'       => 'Dodaj nowy sukces',
+//         'new_item'           => 'Nowy sukces',
+//         'edit_item'          => 'Edytuj sukces',
+//         'view_item'          => 'Zobacz sukces',
+//         'all_items'          => 'Wszystkie sukcesy',
+//         'search_items'       => 'Szukaj sukcesów',
+//         'not_found'          => 'Nie znaleziono',
+//         'not_found_in_trash' => 'Nie znaleziono w koszu'
+//     );
 
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'publicly_queryable' => true,
-        'show_ui'            => true,
-        'show_in_rest'       => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => array('slug' => 'sukcesy'),
-        'capability_type'    => 'page',
-        'has_archive'        => false,
-        'hierarchical'       => false,
-        'menu_position'      => 6,
-        'menu_icon'          => 'dashicons-awards',
-        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt')
-    );
+//     $args = array(
+//         'labels'             => $labels,
+//         'public'             => true,
+//         'publicly_queryable' => true,
+//         'show_ui'            => true,
+//         'show_in_rest'       => true,
+//         'show_in_menu'       => true,
+//         'query_var'          => true,
+//         'rewrite'            => array('slug' => 'sukcesy'),
+//         'capability_type'    => 'page',
+//         'has_archive'        => false,
+//         'hierarchical'       => false,
+//         'menu_position'      => 6,
+//         'menu_icon'          => 'dashicons-awards',
+//         'supports'           => array('title', 'editor', 'thumbnail', 'excerpt')
+//     );
 
-    register_post_type('sukcesy', $args);
-}
-add_action('init', 'register_cpt_sukcesy');
+//     register_post_type('sukcesy', $args);
+// }
+// add_action('init', 'register_cpt_sukcesy');
 
-function register_taxonomy_rok()
-{
-    $labels = array(
-        'name'              => 'Rok',
-        'singular_name'     => 'Rok',
-        'search_items'      => 'Szukaj lat',
-        'all_items'         => 'Wszystkie lata',
-        'edit_item'         => 'Edytuj rok',
-        'update_item'       => 'Aktualizuj rok',
-        'add_new_item'      => 'Dodaj nowy rok',
-        'new_item_name'     => 'Nowy rok',
-        'menu_name'         => 'Rok',
-    );
+// function register_taxonomy_rok()
+// {
+//     $labels = array(
+//         'name'              => 'Rok',
+//         'singular_name'     => 'Rok',
+//         'search_items'      => 'Szukaj lat',
+//         'all_items'         => 'Wszystkie lata',
+//         'edit_item'         => 'Edytuj rok',
+//         'update_item'       => 'Aktualizuj rok',
+//         'add_new_item'      => 'Dodaj nowy rok',
+//         'new_item_name'     => 'Nowy rok',
+//         'menu_name'         => 'Rok',
+//     );
 
-    $args = array(
-        'hierarchical'      => true,
-        'labels'           => $labels,
-        'show_ui'          => true,
-        'show_admin_column' => true,
-        'query_var'        => false,
-        'rewrite'          => array('slug' => 'rok'),
-    );
-    $args_two = array(
-        'hierarchical'      => true,
-        'labels'           => $labels,
-        'show_ui'          => true,
-        'show_in_rest'       => true,
-        'show_admin_column' => true,
-        'query_var'        => false,
-        'rewrite'          => array('slug' => 'rok'),
-    );
+//     $args = array(
+//         'hierarchical'      => true,
+//         'labels'           => $labels,
+//         'show_ui'          => true,
+//         'show_admin_column' => true,
+//         'query_var'        => false,
+//         'rewrite'          => array('slug' => 'rok'),
+//     );
+//     $args_two = array(
+//         'hierarchical'      => true,
+//         'labels'           => $labels,
+//         'show_ui'          => true,
+//         'show_in_rest'       => true,
+//         'show_admin_column' => true,
+//         'query_var'        => false,
+//         'rewrite'          => array('slug' => 'rok'),
+//     );
 
-    register_taxonomy('suk-rok', array('sukcesy'), $args_two);
+//     register_taxonomy('suk-rok', array('sukcesy'), $args_two);
 
-    register_taxonomy('rok', array('w-media'), $args);
-}
-add_action('init', 'register_taxonomy_rok');
+//     register_taxonomy('rok', array('w-media'), $args);
+// }
+// add_action('init', 'register_taxonomy_rok');
 
 
 
