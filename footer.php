@@ -54,6 +54,16 @@
             more.style.display = isHidden ? 'inline' : 'none';
             toggle.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
         });
+
+        const toggleSticky = document.getElementById('consent-sticky');
+        const moreSticky = document.getElementById('consent-sticky');
+
+        toggleSticky.addEventListener('click', function(e) {
+            e.preventDefault();
+            const isHidden = more.style.display === 'none';
+            moreSticky.style.display = isHidden ? 'inline' : 'none';
+            toggleSticky.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
+        });
     });
 </script>
 </body>
