@@ -80,9 +80,9 @@ body {
   transform: translate(0, 200px);
   // padding: 11px;
   transition: all 0.2s linear;
-  border: 2px solid var(--body);
+  border: 2px solid var(--main1);
   path {
-    fill: var(--body) !important;
+    fill: var(--main1) !important;
   }
   @media #{$sm} {
     bottom: 20px;

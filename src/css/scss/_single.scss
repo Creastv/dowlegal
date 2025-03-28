@@ -87,6 +87,9 @@ body.single-post {
           color: var(--white);
           background-color: var(--main);
         }
+        @media #{$xs} {
+          font-weight: 500;
+        }
       }
     }
     img {

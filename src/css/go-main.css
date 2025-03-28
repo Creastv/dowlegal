@@ -280,10 +280,10 @@ body {
   border-radius: 100%;
   transform: translate(0, 200px);
   transition: all 0.2s linear;
-  border: 2px solid var(--body);
+  border: 2px solid var(--main1);
 }
 #go-to-top path {
-  fill: var(--body) !important;
+  fill: var(--main1) !important;
 }
 @media only screen and (max-width: 768px) {
   #go-to-top {
@@ -1457,6 +1457,12 @@ body.single-post .entry-header .entry-term a:hover {
   color: var(--white);
   background-color: var(--main);
 }
+@media only screen and (max-width: 460px) {
+  body.single-post .entry-header .entry-term span,
+  body.single-post .entry-header .entry-term a {
+    font-weight: 500;
+  }
+}
 body.single-post .entry-header img {
   width: 100%;
   max-width: 1000px;
@@ -1898,6 +1904,12 @@ textarea {
 .post__content .entry-term a:hover {
   color: var(--white);
   background-color: var(--main);
+}
+@media only screen and (max-width: 460px) {
+  .post__content .entry-term span,
+  .post__content .entry-term a {
+    font-weight: 500;
+  }
 }
 .post__content .entry-title {
   font-size: 21px;
