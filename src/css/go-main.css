@@ -1888,7 +1888,7 @@ textarea {
   padding: 20px;
 }
 .sukcesy-item:hover {
-  transform: translate(0, -5px) !important;
+  transform: translate(0, -5px);
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
