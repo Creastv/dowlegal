@@ -1772,6 +1772,10 @@ textarea {
   bottom: -30px;
 }
 
+#consent-toggle {
+  font-weight: 500;
+}
+
 .posts-wraper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
