@@ -3,7 +3,6 @@ $style = get_field('style');
 ?>
 <?php if ($style == 1) : ?>
     <!-- 🔹 FILTRACJA PO TAXONOMII -->
-    <div style="height:100px;"></div>
 
 
     <!-- 🔹 POSTY -->
