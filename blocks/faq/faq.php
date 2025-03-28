@@ -16,7 +16,9 @@ $colTwo = $faq['accordion_two'];
                             </h3>
                             <div class="answer">
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p itemprop="text"><?php echo $acc['accordion_content']; ?></p>
+                                    <!-- <p itemprop="text"> -->
+                                    <?php echo $acc['accordion_content']; ?>
+                                    <!-- </p> -->
                                 </div>
                             </div>
                         </div>
@@ -33,7 +35,9 @@ $colTwo = $faq['accordion_two'];
                             </h3>
                             <div class="answer">
                                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                    <p itemprop="text"><?php echo $acc['accordion_content']; ?></p>
+                                    <!-- <p itemprop="text"> -->
+                                    <?php echo $acc['accordion_content']; ?>
+                                    <!-- </p> -->
                                 </div>
                             </div>
                         </div>
