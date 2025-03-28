@@ -1760,6 +1760,12 @@ textarea {
   font-size: 12px;
 }
 
+.go-zgoda label {
+  display: flex;
+}
+.go-zgoda .wpcf7-list-item-label {
+  display: none !important;
+}
 .go-zgoda .wpcf7-not-valid-tip {
   position: absolute;
   width: 100vw;
