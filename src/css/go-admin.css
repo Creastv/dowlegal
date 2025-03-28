@@ -885,11 +885,7 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  height: auto;
 }
 .sukcesy-item .sukcesy-item__content {
   width: 75%;
