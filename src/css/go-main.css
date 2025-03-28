@@ -584,8 +584,8 @@ body {
 }
 .mega-menu-item:not(.mega-menu-flyout) .mega-sub-menu li a {
   background-color: var(--main) !important;
-  min-height: 55px !important;
-  font-size: 14px !important;
+  min-height: 31px !important;
+  font-size: 11px !important;
   text-align: center !important;
   color: var(--main1) !important;
   align-items: center !important;
@@ -593,6 +593,10 @@ body {
   display: flex !important;
   height: 100% !important;
   width: 100% !important;
+  padding: 10px 2px !important;
+  height: 100% !important;
+  min-width: 247px !important;
+  font-weight: 500 !important;
 }
 .mega-menu-item:not(.mega-menu-flyout) .mega-sub-menu li a:hover {
   background-color: var(--main1) !important;
