@@ -156,43 +156,43 @@ add_action('init', 'register_cpt_media');
 // }
 // add_action('init', 'register_cpt_sukcesy');
 
-// function register_taxonomy_rok()
-// {
-//     $labels = array(
-//         'name'              => 'Rok',
-//         'singular_name'     => 'Rok',
-//         'search_items'      => 'Szukaj lat',
-//         'all_items'         => 'Wszystkie lata',
-//         'edit_item'         => 'Edytuj rok',
-//         'update_item'       => 'Aktualizuj rok',
-//         'add_new_item'      => 'Dodaj nowy rok',
-//         'new_item_name'     => 'Nowy rok',
-//         'menu_name'         => 'Rok',
-//     );
+function register_taxonomy_rok()
+{
+    $labels = array(
+        'name'              => 'Rok',
+        'singular_name'     => 'Rok',
+        'search_items'      => 'Szukaj lat',
+        'all_items'         => 'Wszystkie lata',
+        'edit_item'         => 'Edytuj rok',
+        'update_item'       => 'Aktualizuj rok',
+        'add_new_item'      => 'Dodaj nowy rok',
+        'new_item_name'     => 'Nowy rok',
+        'menu_name'         => 'Rok',
+    );
 
-//     $args = array(
-//         'hierarchical'      => true,
-//         'labels'           => $labels,
-//         'show_ui'          => true,
-//         'show_admin_column' => true,
-//         'query_var'        => false,
-//         'rewrite'          => array('slug' => 'rok'),
-//     );
-//     $args_two = array(
-//         'hierarchical'      => true,
-//         'labels'           => $labels,
-//         'show_ui'          => true,
-//         'show_in_rest'       => true,
-//         'show_admin_column' => true,
-//         'query_var'        => false,
-//         'rewrite'          => array('slug' => 'rok'),
-//     );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'           => $labels,
+        'show_ui'          => true,
+        'show_admin_column' => true,
+        'query_var'        => false,
+        'rewrite'          => array('slug' => 'rok'),
+    );
+    $args_two = array(
+        'hierarchical'      => true,
+        'labels'           => $labels,
+        'show_ui'          => true,
+        'show_in_rest'       => true,
+        'show_admin_column' => true,
+        'query_var'        => false,
+        'rewrite'          => array('slug' => 'rok'),
+    );
 
-//     register_taxonomy('suk-rok', array('sukcesy'), $args_two);
+    // register_taxonomy('suk-rok', array('sukcesy'), $args_two);
 
-//     register_taxonomy('rok', array('w-media'), $args);
-// }
-// add_action('init', 'register_taxonomy_rok');
+    register_taxonomy('rok', array('w-media'), $args);
+}
+add_action('init', 'register_taxonomy_rok');
 
 
 
