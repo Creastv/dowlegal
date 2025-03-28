@@ -1775,7 +1775,6 @@ textarea {
 
 .sukcesy-item {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.085);
-  transition: all 0.3s ease-in-out !important;
   background-color: var(--white);
 }
 .sukcesy-item .sukcesy-item__wrap {
