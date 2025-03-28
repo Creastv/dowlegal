@@ -3,27 +3,7 @@ $style = get_field('style');
 ?>
 <?php if ($style == 1) : ?>
     <!-- 🔹 FILTRACJA PO TAXONOMII -->
-    <!-- <?php
-            $terms = get_terms(array(
-                'taxonomy'   => 'suk-rok', // Zmień na swoją nazwę taksonomii
-                'hide_empty' => true,
-            ));
-
-            if (!empty($terms) && !is_wp_error($terms)) {
-                // Sortowanie w odwrotnej kolejności alfabetycznej (od Z do A)
-                usort($terms, function ($a, $b) {
-                    return strcasecmp($b->name, $a->name);
-                });
-            ?>
-        <ul id="filter-category-sukcesy">
-            <li data-slug-sukcesy="all" class="active">Wszystkie</li>
-            <?php foreach ($terms as $term) : ?>
-                <li data-slug-sukcesy="<?php echo esc_attr($term->slug); ?>">
-                    <?php echo esc_html($term->name); ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    <?php } ?> -->
+    <div style="height:100px;"></div>
 
 
     <!-- 🔹 POSTY -->
