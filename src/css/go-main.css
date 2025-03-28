@@ -3482,7 +3482,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .sticker .codedropz-upload-container {
   padding: 10px !important;
 }
-.sticker .codedropz-upload-container h3 {
+.sticker .codedropz-upload-container h3,
+.sticker .codedropz-upload-container * {
   font-size: 12px !important;
   text-transform: uppercase;
   line-height: normal;
