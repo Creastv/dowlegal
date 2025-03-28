@@ -1779,6 +1779,17 @@ textarea {
   font-weight: 500;
 }
 
+.codedropz-upload-container {
+  padding: 10px !important;
+}
+.codedropz-upload-container h3,
+.codedropz-upload-container * {
+  font-size: 12px !important;
+  text-transform: uppercase;
+  line-height: normal;
+  margin: 0;
+}
+
 .posts-wraper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -3478,16 +3489,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .sticker .sticker__wrap .sticky__form .wpcf7-submit {
   width: 100% !important;
   max-width: 100%;
-}
-.sticker .codedropz-upload-container {
-  padding: 10px !important;
-}
-.sticker .codedropz-upload-container h3,
-.sticker .codedropz-upload-container * {
-  font-size: 12px !important;
-  text-transform: uppercase;
-  line-height: normal;
-  margin: 0;
 }
 
 .bounce {
