@@ -60,7 +60,7 @@ $reviews = get_field('reviews');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const WORD_LIMIT = 30;
+        const WORD_LIMIT = 50;
 
         function truncateText(text, limit) {
             const words = text.trim().split(/\s+/);
