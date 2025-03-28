@@ -44,27 +44,27 @@
     AOS.init();
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.getElementById('consent-toggle');
-        const more = document.getElementById('consent-more');
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const toggle = document.getElementById('consent-toggle');
+    //     const more = document.getElementById('consent-more');
 
-        toggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            const isHidden = more.style.display === 'none';
-            more.style.display = isHidden ? 'inline' : 'none';
-            toggle.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
-        });
+    //     toggle.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         const isHidden = more.style.display === 'none';
+    //         more.style.display = isHidden ? 'inline' : 'none';
+    //         toggle.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
+    //     });
 
-        const toggleSticky = document.getElementById('consent-sticky');
-        const moreSticky = document.getElementById('consent-more-sticky');
+    //     const toggleSticky = document.getElementById('consent-sticky');
+    //     const moreSticky = document.getElementById('consent-more-sticky');
 
-        toggleSticky.addEventListener('click', function(e) {
-            e.preventDefault();
-            const isHidden = more.style.display === 'none';
-            moreSticky.style.display = isHidden ? 'inline' : 'none';
-            toggleSticky.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
-        });
-    });
+    //     toggleSticky.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         const isHidden = more.style.display === 'none';
+    //         moreSticky.style.display = isHidden ? 'inline' : 'none';
+    //         toggleSticky.textContent = isHidden ? 'Zwiń' : 'Rozwiń';
+    //     });
+    // });
 </script>
 </body>
 

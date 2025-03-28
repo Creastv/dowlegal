@@ -186,3 +186,14 @@ function add_body_class_header($classes)
 	return $classes;
 }
 add_filter('body_class', 'add_body_class_header');
+
+
+add_action('template_redirect', 'redirect_category_sukcesy');
+
+function redirect_category_sukcesy()
+{
+	if (is_category('sukcesy')) {
+		wp_redirect(home_url('/sukcesy/'), 301);
+		exit;
+	}
+}

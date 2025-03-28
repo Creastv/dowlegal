@@ -174,4 +174,22 @@
 .review-item:hover {
   transform: translate(0, -5px);
   box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.excerpt p.collapsed {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+}
+
+.toggle-btn {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
 }/*# sourceMappingURL=opinions.css.map */

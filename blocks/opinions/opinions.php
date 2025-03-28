@@ -27,6 +27,7 @@ $reviews = get_field('reviews');
                                     <?php if ($rev): ?>
                                         <div class="excerpt">
                                             <p><?php echo $rev; ?></p>
+                                            <button class="toggle-btn">Czytaj więcej</button>
                                         </div>
                                     <?php endif; ?>
                                 </div>
@@ -59,16 +60,47 @@ $reviews = get_field('reviews');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        const WORD_LIMIT = 30;
+
+        function truncateText(text, limit) {
+            const words = text.trim().split(/\s+/);
+            if (words.length <= limit) return text;
+            return words.slice(0, limit).join(" ") + "...";
+        }
+
+        function setupSlideContent(slide) {
+            const p = slide.querySelector(".excerpt p");
+            const btn = slide.querySelector(".toggle-btn");
+
+            if (!p || !btn) return;
+
+            const fullText = p.textContent.trim();
+            const truncatedText = truncateText(fullText, WORD_LIMIT);
+
+            p.dataset.fullText = fullText;
+            p.dataset.truncatedText = truncatedText;
+
+            p.textContent = truncatedText;
+            p.classList.add("collapsed");
+            btn.textContent = "Czytaj więcej";
+
+            btn.onclick = () => {
+                const isCollapsed = p.classList.toggle("collapsed");
+                p.textContent = isCollapsed ? p.dataset.truncatedText : p.dataset.fullText;
+                btn.textContent = isCollapsed ? "Czytaj więcej" : "Zwiń";
+            };
+        }
+
         var swiper = new Swiper(".mySwiper", {
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: "auto",
-            loop: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
+            // loop: true,
+            // autoplay: {
+            //     delay: 3500,
+            //     disableOnInteraction: false,
+            // },
             coverflowEffect: {
                 rotate: 50,
                 stretch: 0,
@@ -84,6 +116,23 @@ $reviews = get_field('reviews');
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            on: {
+                init: function() {
+                    this.slides.forEach(setupSlideContent);
+                },
+                slideChange: function() {
+                    this.slides.forEach(slide => {
+                        const p = slide.querySelector(".excerpt p");
+                        const btn = slide.querySelector(".toggle-btn");
+
+                        if (p && btn) {
+                            p.textContent = p.dataset.truncatedText;
+                            p.classList.add("collapsed");
+                            btn.textContent = "Czytaj więcej";
+                        }
+                    });
+                }
+            }
         });
     </script>
 
