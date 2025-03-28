@@ -16,6 +16,5 @@ $position = get_field('nazwa_pozycji', get_the_ID());
             <p class="entry-content"><?php echo custom_excerpt(30); ?></p>
             <a href="<?php the_permalink(); ?>" class="btn-rev"><?php echo _e('Czytaj więcej', 'go'); ?></a>
         </div>
-
     </div>
 </article>

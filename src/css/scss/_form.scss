@@ -138,3 +138,11 @@ textarea {
 .wpcf7-response-output {
   font-size: 12px;
 }
+
+.go-zgoda {
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    width: 100vw;
+    bottom: -30px;
+  }
+}

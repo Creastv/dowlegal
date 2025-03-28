@@ -84,18 +84,26 @@ add_filter('excerpt_length', 'wp_example_excerpt_length');
 function custom_excerpt($length = 55, $more = '...')
 {
 	global $post;
-	$content = wp_strip_all_tags(get_the_content()); // Pobranie treści posta bez HTML
-	$content = preg_replace('/\[(\/?et_pb_[a-zA-Z0-9_]+)[^\]]*\]/', '', $content);
-	$words = explode(' ', $content, $length + 1); // Podział na słowa
 
-	if (count($words) > $length) {
-		array_pop($words); // Usunięcie ostatniego elementu (nadmiarowego)
-		$content = implode(' ', $words) . $more; // Połączenie i dodanie "..."
+	// Sprawdzenie, czy post ma ustawiony excerpt
+	if (has_excerpt($post->ID)) {
+		$excerpt = get_the_excerpt();
 	} else {
-		$content = implode(' ', $words); // Połączenie bez zmian
+		// Pobranie treści posta bez HTML i shortcodów Divi
+		$content = wp_strip_all_tags(get_the_content());
+		$content = preg_replace('/\[(\/?et_pb_[a-zA-Z0-9_]+)[^\]]*\]/', '', $content);
+
+		// Tworzenie skrótu
+		$words = explode(' ', $content, $length + 1);
+		if (count($words) > $length) {
+			array_pop($words);
+			$excerpt = implode(' ', $words) . $more;
+		} else {
+			$excerpt = implode(' ', $words);
+		}
 	}
 
-	return $content;
+	return $excerpt;
 }
 
 
