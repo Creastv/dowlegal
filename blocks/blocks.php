@@ -48,12 +48,13 @@ function register_acf_block_types()
       'jsx'       => true,
     ],
     'enqueue_assets'    => function () {
-      wp_enqueue_style('go-sukcesy',  get_template_directory_uri() . '/blocks/sukcesy/sukcesy.min.css');
+      // wp_enqueue_style('go-sukcesy',  get_template_directory_uri() . '/blocks/sukcesy/sukcesy.min.css');
       // wp_enqueue_script('go-w-mediach-js', get_template_directory_uri() . '/blocks/w-mediach/w-mediach.js', array('jquery'), '4', true);
     }
   ));
   function enqueue_load_more_script_sukcesy()
   {
+    wp_enqueue_style('go-sukcesy',  get_template_directory_uri() . '/blocks/sukcesy/sukcesy.min.css');
     wp_enqueue_script('load-more-sukcesy', get_template_directory_uri() . '/blocks/sukcesy/sukcesy.js', array('jquery'), null, true);
 
     // Przekazanie wartości PHP do JS
