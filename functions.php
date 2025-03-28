@@ -81,7 +81,7 @@ function wp_example_excerpt_length($length)
 }
 add_filter('excerpt_length', 'wp_example_excerpt_length');
 
-function custom_excerpt($length, $more = '...')
+function custom_excerpt($length = 55, $more = '...')
 {
 	global $post;
 	$content = wp_strip_all_tags(get_the_content()); // Pobranie treści posta bez HTML
