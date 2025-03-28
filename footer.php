@@ -56,7 +56,7 @@
         });
 
         const toggleSticky = document.getElementById('consent-sticky');
-        const moreSticky = document.getElementById('consent-sticky');
+        const moreSticky = document.getElementById('consent-more-sticky');
 
         toggleSticky.addEventListener('click', function(e) {
             e.preventDefault();
