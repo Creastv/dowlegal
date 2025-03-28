@@ -32,7 +32,7 @@
 }
 .post {
   background-color: var(--white);
-  transition: all 0.4s ease-out !important;
+  transition: all 0.4s ease-out;
   height: 100%;
   .post__img {
     padding-bottom: 0px;
@@ -54,7 +54,7 @@
     }
   }
   &:hover {
-    transform: translate(0, -10px) !important;
+    transform: translate(0, -10px);
     box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
     img {
       filter: contrast(105%);
