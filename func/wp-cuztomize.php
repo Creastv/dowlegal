@@ -142,6 +142,31 @@ function register_header_settings($wp_customize)
     );
 }
 add_action('customize_register', 'register_header_settings');
+function go_customize_blog_settings($wp_customize)
+{
+
+    // Dodaj nową sekcję w Customizerze
+    $wp_customize->add_section('blog_settings_section', array(
+        'title'    => __('Ustawienia blog', 'go'),
+        'priority' => 30,
+    ));
+
+    // Dodaj ustawienie (przechowuje wartość textarea)
+    $wp_customize->add_setting('blog_custom_textarea', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_textarea_field',
+        'transport'         => 'refresh',
+    ));
+
+    // Dodaj kontrolkę (textarea)
+    $wp_customize->add_control('blog_custom_textarea_control', array(
+        'label'    => __('Opis pod nagłówkiem Blog', 'go'),
+        'section'  => 'blog_settings_section',
+        'settings' => 'blog_custom_textarea',
+        'type'     => 'textarea',
+    ));
+}
+add_action('customize_register', 'go_customize_blog_settings');
 
 
 function register_footer_settings($wp_customize)

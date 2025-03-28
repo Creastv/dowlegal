@@ -1,4 +1,6 @@
 <?php
+$desc_blog = get_theme_mod('blog_custom_textarea', '');
+
 $title = get_field('display_title', get_the_ID());
 $customTitle = get_field('custom_title', get_the_ID());
 $backgroun_image_default = get_theme_mod('header_bg');
@@ -69,6 +71,11 @@ if (is_category()) {
 						_e('Blog', 'go');
 					endif; ?>
 				</h1>
+				<?php if (is_home() && $desc_blog) : ?>
+					<div class="entry-desc">
+						<p><?php echo $desc_blog; ?></p>
+					</div>
+				<?php endif; ?>
 			<?php else : ?>
 				<?php if (!empty($customTitle['label'])): ?>
 					<span class="entry-label"><?php echo $customTitle['label']; ?></span>
@@ -86,6 +93,7 @@ if (is_category()) {
 						<?php echo $customTitle['description']; ?>
 					</div>
 				<?php endif; ?>
+
 			<?php endif; ?>
 
 
