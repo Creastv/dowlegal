@@ -1762,6 +1762,7 @@ textarea {
 
 .go-zgoda label {
   display: flex;
+  font-size: 12px;
 }
 .go-zgoda .wpcf7-list-item-label {
   display: none !important;
