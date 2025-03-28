@@ -5,7 +5,7 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'medium');
 
 ?>
 
-<article class="sukcesy-item" data-aos="fade-up">
+<article class="sukcesy-item">
     <div class="sukcesy-item__wrap">
         <div class="sukcesy-item__img">
             <?php // echo wp_get_attachment_image($avatar, 'medium'); 
