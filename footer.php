@@ -41,7 +41,9 @@
 <?php get_template_part('templates-parts/parts/sticker'); ?>
 <?php wp_footer(); ?>
 <script>
-    AOS.init();
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+    });
 </script>
 </body>
 
