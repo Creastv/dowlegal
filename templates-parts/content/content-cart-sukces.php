@@ -10,7 +10,7 @@ $logo = wp_get_attachment_image_src($custom_logo_id, 'medium');
         <div class="sukcesy-item__img">
             <?php // echo wp_get_attachment_image($avatar, 'medium'); 
             ?>
-            <?php the_post_thumbnail('meddium', array('alt' => get_the_title())); ?>
+            <?php the_post_thumbnail('post-futured', array('alt' => get_the_title())); ?>
         </div>
         <div class="sukcesy-item__content ">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
