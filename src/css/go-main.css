@@ -3479,6 +3479,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 100% !important;
   max-width: 100%;
 }
+.sticker .codedropz-upload-container {
+  padding: 10px !important;
+}
+.sticker .codedropz-upload-container h3 {
+  font-size: 12px !important;
+  text-transform: uppercase;
+  line-height: normal;
+  margin: 0;
+}
 
 .bounce {
   position: fixed;
