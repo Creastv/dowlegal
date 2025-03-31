@@ -299,3 +299,55 @@ function register_footer_settings($wp_customize)
     ]);
 }
 add_action('customize_register', 'register_footer_settings');
+
+
+// Rejestracja stringów
+
+function go_register_customizer_strings_for_wpml()
+{
+    // Social media
+    $social_media = ['facebook', 'twitter', 'instagram', 'linkedin', 'tiktok'];
+    foreach ($social_media as $platform) {
+        $value = get_theme_mod("{$platform}_url");
+        do_action('wpml_register_single_string', 'Opcje Motywu', strtoupper($platform) . ' URL', $value);
+    }
+
+    // Header
+    $header_settings = [
+        'header_phone_number'      => 'Header: Numer telefonu',
+        'header_email_address'     => 'Header: E-mail',
+        'header_address'           => 'Header: Adres',
+        'header_address_link'      => 'Header: Link do map',
+        'header_btn_one_text'      => 'Header: Button 1 Text',
+        'header_btn_two_text'      => 'Header: Button 2 Text',
+    ];
+    foreach ($header_settings as $key => $label) {
+        do_action('wpml_register_single_string', 'Opcje Motywu', $label, get_theme_mod($key));
+    }
+
+    // Blog
+    do_action('wpml_register_single_string', 'Opcje Motywu', 'Opis bloga', get_theme_mod('blog_custom_textarea'));
+
+    // Footer
+    $footer_settings = [
+        'footer_text_under_logo' => 'Footer: Tekst pod logo',
+        'footer_phone_number'    => 'Footer: Numer telefonu',
+        'footer_email_address'   => 'Footer: E-mail',
+        'footer_address'         => 'Footer: Adres',
+        'footer_opening'         => 'Footer: Godziny otwarcia',
+    ];
+    foreach ($footer_settings as $key => $label) {
+        do_action('wpml_register_single_string', 'Opcje Motywu', $label, get_theme_mod($key));
+    }
+
+    // Footer menu titles
+    for ($i = 1; $i <= 5; $i++) {
+        $label = sprintf('Footer: Tytuł menu %d', $i);
+        $value = get_theme_mod("footer_menu_title_{$i}");
+        do_action('wpml_register_single_string', 'Opcje Motywu', $label, $value);
+    }
+}
+add_action('init', 'go_register_customizer_strings_for_wpml');
+
+
+add_action('customize_save_after', 'go_register_customizer_strings_for_wpml');

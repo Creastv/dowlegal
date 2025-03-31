@@ -15,7 +15,7 @@ $articles = new WP_Query(array(
 ?>
 <div class="recommended-posts">
     <div class="recommended-posts__wrap">
-        <h3 class="text-center h2"><?php _e('Może cię zainteresować', 'go'); ?></h3>
+        <h3 class="text-center h2"><?php echo _e('Może cię zainteresować', 'go'); ?></h3>
         <div class="recommended-posts__posts-wraper posts-wraper--suggested">
             <?php while ($articles->have_posts()) : $articles->the_post(); ?>
                 <?php get_template_part('templates-parts/content/content-cart-post');  ?>

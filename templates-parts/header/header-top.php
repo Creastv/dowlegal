@@ -65,5 +65,6 @@
                 <?php get_template_part('templates-parts/parts/social_media'); ?>
             <?php endif; ?>
         </div>
+        <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
     </div>
 </div>
