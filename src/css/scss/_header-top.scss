@@ -40,6 +40,16 @@
       gap: 8px;
     }
 
+    .h-top-adres {
+      @media #{$lg} {
+        display: none !important;
+      }
+    }
+    .h-top-phone {
+      @media #{$sm} {
+        display: none !important;
+      }
+    }
     .h-top-adres,
     .h-top-email {
       color: var(--black);
@@ -85,6 +95,9 @@
   .h-top__sm {
     svg {
       display: block;
+    }
+    @media #{$xs} {
+      display: none;
     }
   }
   .wpml-ls-statics-shortcode_actions {

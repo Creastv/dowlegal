@@ -412,6 +412,16 @@ body {
     gap: 8px;
   }
 }
+@media only screen and (max-width: 1300px) {
+  .h-top .h-top__contact .h-top-adres {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .h-top .h-top__contact .h-top-phone {
+    display: none !important;
+  }
+}
 .h-top .h-top__contact .h-top-adres,
 .h-top .h-top__contact .h-top-email {
   color: var(--black);
@@ -468,6 +478,11 @@ body {
 }
 .h-top .h-top__sm svg {
   display: block;
+}
+@media only screen and (max-width: 460px) {
+  .h-top .h-top__sm {
+    display: none;
+  }
 }
 .h-top .wpml-ls-statics-shortcode_actions ul li a {
   padding: 0;
@@ -567,8 +582,8 @@ body {
 }
 @media only screen and (max-width: 460px) {
   .h-nav .h-nav__wrap .h-nav__buttons a {
-    font-size: 12px;
-    padding: 3px 5px;
+    font-size: 10px;
+    padding: 0px 5px;
   }
 }
 
@@ -608,9 +623,13 @@ body {
   height: 100% !important;
   width: 100% !important;
   padding: 10px 2px !important;
-  height: 100% !important;
-  min-width: 247px !important;
+  height: 50px !important;
   font-weight: 500 !important;
+}
+@media only screen and (max-width: 768px) {
+  .mega-menu-item:not(.mega-menu-flyout) .mega-sub-menu li a {
+    height: 100% !important;
+  }
 }
 .mega-menu-item:not(.mega-menu-flyout) .mega-sub-menu li a:hover {
   background-color: var(--main1) !important;
