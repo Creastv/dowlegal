@@ -519,7 +519,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .h-middle .navbar__brand a img {
-    max-width: 150px;
+    max-width: 180px;
     width: 100%;
   }
 }
