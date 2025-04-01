@@ -97,20 +97,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const consentTranslations = {
-    expand: "<?php echo esc_js(__('Rozwiń', 'go')); ?>",
-    collapse: "<?php echo esc_js(__('Zwiń', 'go')); ?>"
-  };
-
   const toggle = document.getElementById('consent-toggle');
   const more = document.getElementById('consent-more');
-
+  console.log(object_name);
   if (toggle && more) {
       toggle.addEventListener('click', function(e) {
           e.preventDefault();
           const isHidden = more.style.display === 'none';
           more.style.display = isHidden ? 'inline' : 'none';
-          toggle.textContent = isHidden ? consentTranslations.collapse : consentTranslations.expand;
+          // toggle.textContent = isHidden ? object_name.zwin : object_name.rozwin;
+          toggle.textContent = isHidden ? object_name.rozwin : object_name.zwin;
+         
       });
   }
 
@@ -122,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
           e.preventDefault();
           const isHidden = more.style.display === 'none';
           moreSticky.style.display = isHidden ? 'inline' : 'none';
-          toggleSticky.textContent = isHidden ? consentTranslations.collapse : consentTranslations.expand;
+          toggleSticky.textContent = isHidden ? object_name.rozwin : object_name.zwin;
       });
   }
 });

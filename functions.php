@@ -201,3 +201,11 @@ function redirect_category_sukcesy()
 
 add_action('customize_save_after', 'go_register_customizer_strings_for_wpml');
 add_action('customize_save_after', 'register_footer_settings');
+
+
+
+// $translation_array = array(
+// 	'zwin'     => __('Rozwiń', 'go'),
+// 	'rozwin'     => __('Zwiń', 'go'),
+// );
+// wp_localize_script('maxcashtheme-script', 'object_name', $translation_array);
