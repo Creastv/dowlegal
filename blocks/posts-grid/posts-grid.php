@@ -21,3 +21,8 @@ if ($type == 1) { ?>
 <?php get_template_part('blocks/posts-grid/post-cat'); ?>
 <?php } ?>
 <?php } ?>
+
+<?php if ($type == 3) { ?>
+<?php get_template_part('blocks/posts-grid/post-object'); ?>
+
+<?php } ?>
