@@ -320,6 +320,8 @@ function go_register_customizer_strings_for_wpml()
         'header_address_link'      => 'Header: Link do map',
         'header_btn_one_text'      => 'Header: Button 1 Text',
         'header_btn_two_text'      => 'Header: Button 2 Text',
+        'header_btn_one_link'      => 'Header: Button 1 Link',
+        'header_btn_two_link'      => 'Header: Button 2 Link',
     ];
     foreach ($header_settings as $key => $label) {
         do_action('wpml_register_single_string', 'Opcje Motywu', $label, get_theme_mod($key));

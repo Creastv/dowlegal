@@ -1,8 +1,8 @@
 <?php
-$header_btn_one_link = get_theme_mod('header_btn_one_link', '');
-$header_btn_one_text = get_theme_mod('header_btn_one_text', '');
-$header_btn_two_link = get_theme_mod('header_btn_two_link', '');
-$header_btn_two_text = get_theme_mod('header_btn_two_text', '');
+$header_btn_one_link = get_option('header_btn_one_link', '');
+$header_btn_one_text = get_option('header_btn_one_text', '');
+$header_btn_two_link = get_option('header_btn_two_link', '');
+$header_btn_two_text = get_option('header_btn_two_text', '');
 ?>
 <div class="h-nav">
     <div class="container-full">
@@ -24,11 +24,13 @@ $header_btn_two_text = get_theme_mod('header_btn_two_text', '');
                 ?>
             </nav>
             <div class="h-nav__buttons">
-                <?php if ($header_btn_one_link && $header_btn_one_text) : ?>
-                    <a href="<?php echo $header_btn_one_link; ?>" class="btn-rev"><?php echo $header_btn_one_text; ?></a>
+                <?php if (apply_filters('wpml_translate_single_string',  $header_btn_one_link, 'Opcje Motywu', 'Header: Button 1 Link')) : ?>
+                    <a href="<?php echo apply_filters('wpml_translate_single_string',  $header_btn_one_link, 'Opcje Motywu', 'Header: Button 1 Link'); ?>"
+                        class="btn-rev"><?php echo apply_filters('wpml_translate_single_string',  $header_btn_one_text, 'Opcje Motywu', 'Header: Button 1 Text'); ?></a>
                 <?php endif; ?>
-                <?php if ($header_btn_two_link && $header_btn_two_text) : ?>
-                    <a href="<?php echo $header_btn_two_link; ?>" class="btn-main"><?php echo $header_btn_two_text; ?></a>
+                <?php if (apply_filters('wpml_translate_single_string',  $header_btn_one_link, 'Opcje Motywu', 'Header: Button 1 Link')) : ?>
+                    <a href="<?php echo apply_filters('wpml_translate_single_string',  $header_btn_two_link, 'Opcje Motywu', 'Header: Button 2 Link'); ?>; ?>"
+                        class="btn-main"><?php echo apply_filters('wpml_translate_single_string',  $header_btn_two_text, 'Opcje Motywu', 'Header: Button 2 Text'); ?></a>
                 <?php endif; ?>
             </div>
         </div>
