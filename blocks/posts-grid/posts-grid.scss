@@ -130,7 +130,7 @@
   }
 }
 
-.posts-selected--2 {
+.posts-selected--1 {
   grid-template-columns: 1fr 1fr;
   @media #{$md} {
     gap: 8px;
@@ -142,7 +142,7 @@
   }
 }
 
-.posts-selected--3 {
+.posts-selected--2 {
   grid-template-columns: 1fr 1fr 1fr;
   @media #{$md} {
     gap: 8px;

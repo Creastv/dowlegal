@@ -161,33 +161,33 @@
   }
 }
 
-.posts-selected--2 {
+.posts-selected--1 {
   grid-template-columns: 1fr 1fr;
 }
 @media only screen and (max-width: 998px) {
-  .posts-selected--2 {
+  .posts-selected--1 {
     gap: 8px;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (max-width: 768px) {
-  .posts-selected--2 {
+  .posts-selected--1 {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 }
 
-.posts-selected--3 {
+.posts-selected--2 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 @media only screen and (max-width: 998px) {
-  .posts-selected--3 {
+  .posts-selected--2 {
     gap: 8px;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (max-width: 768px) {
-  .posts-selected--3 {
+  .posts-selected--2 {
     grid-template-columns: 1fr;
     gap: 10px;
   }
