@@ -145,7 +145,7 @@
 .posts-selected {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px 0;
+  gap: 20px;
   margin-bottom: 50px;
 }
 @media only screen and (max-width: 998px) {
