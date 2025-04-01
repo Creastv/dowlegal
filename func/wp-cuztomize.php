@@ -348,6 +348,3 @@ function go_register_customizer_strings_for_wpml()
     }
 }
 add_action('init', 'go_register_customizer_strings_for_wpml');
-
-
-add_action('customize_save_after', 'go_register_customizer_strings_for_wpml');
