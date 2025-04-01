@@ -169,7 +169,7 @@ function wp_post_search_form()
 
 		<button type="submit">Szukaj</button>
 	</form>
-<?php
+	<?php
 	return ob_get_clean();
 }
 
@@ -203,9 +203,18 @@ add_action('customize_save_after', 'go_register_customizer_strings_for_wpml');
 add_action('customize_save_after', 'register_footer_settings');
 
 
-
-// $translation_array = array(
-// 	'zwin'     => __('Rozwiń', 'go'),
-// 	'rozwin'     => __('Zwiń', 'go'),
-// );
-// wp_localize_script('maxcashtheme-script', 'object_name', $translation_array);
+function cf7_redirect_script()
+{
+	if (is_page('contact')) { // Możesz też użyć ID lub warunku z WPML
+		// Ustal URL przekierowania zależnie od języka
+		$redirect_url = apply_filters('wpml_permalink', home_url('/thx/'), ICL_LANGUAGE_CODE);
+	?>
+		<script>
+			document.addEventListener('wpcf7mailsent', function(event) {
+				window.location.href = '<?php echo esc_url($redirect_url); ?>';
+			}, false);
+		</script>
+<?php
+	}
+}
+add_action('wp_footer', 'cf7_redirect_script');
