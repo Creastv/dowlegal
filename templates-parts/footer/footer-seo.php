@@ -51,9 +51,7 @@ $display_socialmedia = get_theme_mod('footer_display_socialmedia', false);
                                     d="M9 22.8332C8.74723 22.8332 8.53056 22.761 8.35001 22.6165C8.16945 22.4721 8.03403 22.2825 7.94376 22.0478C7.6007 21.0366 7.16737 20.0887 6.64375 19.204C6.1382 18.3193 5.425 17.2811 4.50417 16.0894C3.58334 14.8978 2.83403 13.7603 2.25625 12.6769C1.69653 11.5936 1.41667 10.2846 1.41667 8.74984C1.41667 6.63734 2.14792 4.84984 3.61042 3.38734C5.09098 1.90678 6.8875 1.1665 9 1.1665C11.1125 1.1665 12.9 1.90678 14.3625 3.38734C15.8431 4.84984 16.5833 6.63734 16.5833 8.74984C16.5833 10.3929 16.2674 11.7651 15.6354 12.8665C15.0215 13.9498 14.3083 15.0241 13.4958 16.0894C12.5208 17.3894 11.7806 18.4728 11.275 19.3394C10.7875 20.188 10.3813 21.0908 10.0563 22.0478C9.96598 22.3005 9.82153 22.4991 9.62292 22.6436C9.44237 22.77 9.23473 22.8332 9 22.8332ZM9 11.4582C9.75834 11.4582 10.3993 11.1964 10.9229 10.6728C11.4465 10.1491 11.7083 9.50817 11.7083 8.74984C11.7083 7.9915 11.4465 7.35053 10.9229 6.82692C10.3993 6.30331 9.75834 6.0415 9 6.0415C8.24167 6.0415 7.6007 6.30331 7.07709 6.82692C6.55348 7.35053 6.29167 7.9915 6.29167 8.74984C6.29167 9.50817 6.55348 10.1491 7.07709 10.6728C7.6007 11.1964 8.24167 11.4582 9 11.4582Z"
                                     stroke="#FD5B39" />
                             </svg>
-                            <span><?php //echo $footer_adres; 
-                                    ?>
-                                <?php echo apply_filters('wpml_translate_single_string',  $footer_adres, 'Opcje Motywu', 'Footer: Adres'); ?></span>
+                            <span><?php echo apply_filters('wpml_translate_single_string',  $footer_adres, 'Opcje Motywu', 'Footer: Adres'); ?></span>
                         </li>
                         <?php // endif; 
                         ?>
@@ -115,23 +113,18 @@ $display_socialmedia = get_theme_mod('footer_display_socialmedia', false);
 
         <!-- 🔹 Kolumny 3-5: 3 menu w footerze -->
         <?php for ($i = 1; $i <= 5; $i++) :
-            $menu_title = get_theme_mod("footer_menu_title_$i", '');
+            $menu_title = get_option("footer_menu_title_{$i}", '');
             $menu_id = get_theme_mod("footer_menu_$i", '');
         ?>
             <?php if ($menu_id) : ?>
                 <div class="f-col">
                     <div class="calaps">
 
-
-                        <?php if ($menu_title) : ?>
-                            <div class="calaps__opener">
-                                <h5><?php echo esc_html($menu_title); ?></h5>
-                            </div>
-                        <?php else: ?>
-                            <div class="calaps__opener">
-                                <span class="f-spacer"></span>
-                            </div>
-                        <?php endif; ?>
+                        <div class="calaps__opener">
+                            <h5>
+                                <?php echo apply_filters('wpml_translate_single_string', $menu_title, 'Opcje Motywu', "Footer: Tytuł menu {$i}"); ?>
+                            </h5>
+                        </div>
                         <div class="calaps__list">
                             <?php
                             wp_nav_menu([
